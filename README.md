@@ -39,7 +39,17 @@ Project Technician 2020 ☺️👌🏻
                
           boostrap twitter
           font-awesome
-          nugets 3.1.x
+          nugets:
+
+              <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.5" />
+              <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.5" />
+              <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.5" />
+              <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.5" />
+              <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.5" />
+              <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.5" />
+              <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
+              <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.5" />
+
           jquery
               
               
