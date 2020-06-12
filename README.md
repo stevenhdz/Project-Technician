@@ -33,6 +33,10 @@ Project Technician 2020 ☺️👌🏻
           
           
    ⚙️®️Ⓜ️ -> EntityFrameworkcore 3.x
+                              
+              Model: Code first
+              
+                            Class ----➡️ EF CORE ----➡️ DATABASE
               
   
    🆔 BaseData:
