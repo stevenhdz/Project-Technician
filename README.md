@@ -5,37 +5,36 @@ Project Technician 2020 ☺️👌🏻
 
           asp.net core 3.x -> future -> Blazor in progress
    
-   Licence: 
+  🦾 Licence: 
    
           MIT
-
-   Languages: 
+  🦾 Languages: 
    
           c#
           Javascript
           html
    
-   Techniques:
+  🦾 Techniques:
    
           mvc+vm: scheme ->
           ORM -> EntityFrameworkcore 3.x
               
-   BaseData:
+  🦾 BaseData:
       
           SQlite
   
-   Platforms: 
+  🦾 Platforms: 
       
           Web
    
-   Tools:
+  🦾 Tools:
    
           Visual studio code
           Visual studio
           DB browser for SQlite
           SQlite Studio
   
-   Libraries integrate - no integrate the project online: 
+  🦾 Libraries integrate - no integrate the project online: 
                
           boostrap twitter
 
@@ -56,9 +55,27 @@ Project Technician 2020 ☺️👌🏻
           jquery:
               
               jQuery JavaScript Library v3.3.1
+ 
+🦾 Extras:
+ 
+          css:
           
- css
- MDBoostrap:
+              <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+              <link rel="stylesheet" href="~/css/site.css" />
+          
+          MDBoostrap:
+          
+              <!-- Google Fonts -->
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+              <!-- Bootstrap core CSS -->
+              <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+              <!-- Material Design Bootstrap -->
+              <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+              <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+              
+          Font-awesome:
+          
+              <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
               
               
                
