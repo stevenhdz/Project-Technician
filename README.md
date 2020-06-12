@@ -38,6 +38,8 @@ Project Technician 2020 ☺️👌🏻
               
                             Class ----➡️ EF CORE ----➡️ DATABASE
               
+              Dataannotations: Library
+              
   
    🆔 BaseData:
       
@@ -55,6 +57,8 @@ Project Technician 2020 ☺️👌🏻
           SQlite Studio
   
   📕 Libraries integrate - no integrate the project online: 
+  
+          dataannotations: EF CORE
           
           side - client:
           boostrap twitter
