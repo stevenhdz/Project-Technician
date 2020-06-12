@@ -35,10 +35,13 @@ Project Technician 2020 ☺️👌🏻
           DB browser for SQlite
           SQlite Studio
   
-   Libraries: 
+   Libraries integrate - no integrate the project online: 
                
           boostrap twitter
-          font-awesome
+
+              "library": "twitter-bootstrap@4.5.0",
+              "destination": "wwwroot/twitter-bootstrap/"
+
           nugets:
 
               <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.5" />
@@ -50,7 +53,12 @@ Project Technician 2020 ☺️👌🏻
               <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
               <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.5" />
 
-          jquery
+          jquery:
+              
+              jQuery JavaScript Library v3.3.1
+          
+ css
+ MDBoostrap:
               
               
                
