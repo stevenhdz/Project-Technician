@@ -26,7 +26,7 @@ Project Technician 2020 ☺️👌🏻
                             |-----------------------|------|                          |
                             |                       |      |                          |
                            🔽                       |     🔼                          |
-                          Views ⬅️--- Controllers --|--➡️ ViewModels ------➡️ Models -|---➡️ Database
+                          Views ⬅️--- Controllers --|--➡️ ViewModels ------➡️ Models--|---➡️ Database
                             |             |         |      |               |          | 
                             |             |         |      |               |          |
                             🔽           🔽         |     🔽              🔽         |
