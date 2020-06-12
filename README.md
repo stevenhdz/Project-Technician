@@ -1,6 +1,6 @@
 # Project-Technician
 
-# In Progress - Any time finish
+# In Progress - Any time, I finish
 
 Create for SLTECHNOLOGY
 Project Technician 2020 ☺️👌🏻
@@ -47,6 +47,9 @@ Project Technician 2020 ☺️👌🏻
               "destination": "wwwroot/twitter-bootstrap/"
 
           nugets:
+          
+                    
+                    Update: in the commit version 3.1.* for up
 
               <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.5" />
               <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.5" />
