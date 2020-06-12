@@ -1,20 +1,26 @@
 # Project-Technician
-Project Technician ☺️👌🏻
+Project Technician 2020 ☺️👌🏻
 
 🗒 Frameworks:
    asp.net core 3.x -> future -> Blazor in progress
+   
+   Licence: 
+   MIT
 
    Languages: 
    c#
    Javascript
+   
+      Techniques: 
+      mvc+vm: scheme ->
+      ORM -> EntityFrameworkcore 3.x
               
    BBDD: SQlite
    
-   ORM: EntityFrameworkcore 3.x
-   
    Platforms: Net core
    
-   Techniques: mvc+vm
+
+   
    
    Tools: Visual studio code
           Visual studio
