@@ -35,7 +35,8 @@ Project Technician 2020 ☺️👌🏻
           SQlite Studio
   
   🦾 Libraries integrate - no integrate the project online: 
-               
+          
+          side - client:
           boostrap twitter
 
               "library": "twitter-bootstrap@4.5.0",
