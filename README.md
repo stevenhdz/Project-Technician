@@ -1,9 +1,12 @@
 # Project-Technician
 Project Technician ☺️👌🏻
 
-🗒 Frameworks: asp.net core 3.x
+🗒 Frameworks:
+   asp.net core 3.x -> future -> Blazor in progress
 
-   Languages: c#
+   Languages: 
+   c#
+   Javascript
               
    BBDD: SQlite
    
