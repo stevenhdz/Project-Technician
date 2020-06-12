@@ -1,9 +1,7 @@
 # Project-Technician
 
-# In Progress - Any time, I finish
+# In Progress - Any time, I finish 🛠⚙️
 
-Create for SLTECHNOLOGY
-________________________
 Project Technician 2020 ☺️👌🏻
 
 🗒 Frameworks:
@@ -11,17 +9,18 @@ Project Technician 2020 ☺️👌🏻
           asp.net core 3.x -> future -> Blazor in progress
    
   🦾 Licence: 
-   
-          MIT
+  
+         🆓 MIT
+          
   🦾 Languages: 
    
-          c#
-          Javascript
-          html
+     ©️#️⃣ c#
+       💡 Javascript
+       🃏 html
    
   🦾 Techniques:
           
-          mvc+vm scheme:          
+       🧰 mvc+vm scheme:          
                              
                              <-----------------------------|
                           Views <--- Controllers ---> ViewModels ----> Models ----> Database
@@ -29,9 +28,10 @@ Project Technician 2020 ☺️👌🏻
                          Response    Client Side       VistasDB         DB                
           
           
-          ORM -> EntityFrameworkcore 3.x
+   ⚙️®️Ⓜ️ -> EntityFrameworkcore 3.x
               
-  🦾 BaseData:
+  
+   🆔 BaseData:
       
           SQlite
   
@@ -39,14 +39,14 @@ Project Technician 2020 ☺️👌🏻
       
           Web
    
-  🦾 Tools:
+  🛠 Tools:
    
           Visual studio code
           Visual studio
           DB browser for SQlite
           SQlite Studio
   
-  🦾 Libraries integrate - no integrate the project online: 
+  📕 Libraries integrate - no integrate the project online: 
           
           side - client:
           boostrap twitter
@@ -93,7 +93,7 @@ Project Technician 2020 ☺️👌🏻
           
               <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
               
- 🦾 Execute:
+ ⏯ Execute:
  
          VSCODE:
               
@@ -127,8 +127,11 @@ Project Technician 2020 ☺️👌🏻
                 
               CD /
               dotnet run
+              
+________________________
                
-   
+☠️ Create by SLTECHNOLOGY ☠️
+
    
 
 
