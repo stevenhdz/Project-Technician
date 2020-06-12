@@ -103,6 +103,15 @@ Project Technician 2020 ☺️👌🏻
               
               DROP-DATABASE
               UPDATE-DATABASE
+              
+          VISUAL STUDIO:
+          
+              SQUAL TO CODE GENRATION EXCEPT
+              
+              Important sdk 3.1.x
+                
+              CD /
+              dotnet run
                
    
    
