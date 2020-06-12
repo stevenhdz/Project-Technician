@@ -3,33 +3,33 @@ Project Technician 2020 ☺️👌🏻
 
 🗒 Frameworks:
 
-      asp.net core 3.x -> future -> Blazor in progress
+          asp.net core 3.x -> future -> Blazor in progress
    
    Licence: 
    
-      MIT
+          MIT
 
    Languages: 
    
-      c#
-      Javascript
-      html
+          c#
+          Javascript
+          html
    
    Techniques:
    
-      mvc+vm: scheme ->
-      ORM -> EntityFrameworkcore 3.x
+          mvc+vm: scheme ->
+          ORM -> EntityFrameworkcore 3.x
               
-   BaseData: 
+   BaseData:
       
-      SQlite
-   
+          SQlite
+  
    Platforms: 
       
-      Web
+          Web
    
-   Tools: 
-          
+   Tools:
+   
           Visual studio code
           Visual studio
           DB browser for SQlite
