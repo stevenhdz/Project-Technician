@@ -47,6 +47,22 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Contacto",
+                columns: table => new
+                {
+                    IdContact = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(nullable: true),
+                    Mail = table.Column<string>(nullable: true),
+                    Phone = table.Column<string>(nullable: true),
+                    Mensaje = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Contacto", x => x.IdContact);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Employees",
                 columns: table => new
                 {
@@ -237,6 +253,9 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "Contacto");
 
             migrationBuilder.DropTable(
                 name: "Employees");

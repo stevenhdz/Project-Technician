@@ -212,6 +212,29 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("MvcCoreUploadAndDisplayImage_Demo.Models.Contacto", b =>
+                {
+                    b.Property<int>("IdContact")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Mail")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Mensaje")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("IdContact");
+
+                    b.ToTable("Contacto");
+                });
+
             modelBuilder.Entity("MvcCoreUploadAndDisplayImage_Demo.Models.Employee", b =>
                 {
                     b.Property<int>("IdPersona")

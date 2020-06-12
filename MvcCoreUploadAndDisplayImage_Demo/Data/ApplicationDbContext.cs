@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MvcCoreUploadAndDisplayImage_Demo.Models;
 
+
 namespace MvcCoreUploadAndDisplayImage_Demo.Data
 {
     public class ApplicationDbContext : IdentityDbContext
@@ -15,5 +16,6 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Data
         }
 
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Contacto> Contacto { get; set; }
     }
 }

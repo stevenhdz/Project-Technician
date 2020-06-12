@@ -9,7 +9,7 @@ using MvcCoreUploadAndDisplayImage_Demo.Data;
 namespace MvcCoreUploadAndDisplayImage_Demo.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200610015446_initial1")]
+    [Migration("20200611183321_initial1")]
     partial class initial1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -212,6 +212,29 @@ namespace MvcCoreUploadAndDisplayImage_Demo.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("MvcCoreUploadAndDisplayImage_Demo.Models.Contacto", b =>
+                {
+                    b.Property<int>("IdContact")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Mail")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Mensaje")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("IdContact");
+
+                    b.ToTable("Contacto");
                 });
 
             modelBuilder.Entity("MvcCoreUploadAndDisplayImage_Demo.Models.Employee", b =>
