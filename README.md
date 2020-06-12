@@ -8,23 +8,27 @@ Project Technician 2020 ☺️👌🏻
 
           asp.net core 3.x -> future -> Blazor in progress
    
-  🦾 Licence: 
+  🆓 Licence: 
   
-         🆓 MIT
+         MIT
           
-  🦾 Languages: 
+©️#️⃣ Languages: 
    
-     ©️#️⃣ c#
-       💡 Javascript
-       🃏 html
+          c#
+          Javascript
+          html
    
-  🦾 Techniques:
+  🧰 Techniques:
           
-       🧰 mvc+vm scheme:          
+          mvc+vm scheme:          
                              
-                             <-----------------------------|
-                          Views <--- Controllers ---> ViewModels ----> Models ----> Database
+                            |-----------------------------|
+                            |                             |
+                           🔽                            🔼
+                          Views ⬅️--- Controllers ---➡️ ViewModels ----➡️ Models ----➡️ Database
                             |             |               |             |
+                            |             |               |             |
+                            🔽           🔽              🔽            🔽
                          Response    Client Side       VistasDB         DB                
           
           
