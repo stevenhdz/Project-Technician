@@ -89,6 +89,15 @@ Project Technician 2020 ☺️👌🏻
               
          CODE GENERATION:
          
+              POSIBLE ERROR SOLUTION
+                DELETE FOLDER MIGRATIONS
+                DELETE AND DROP DATABASE Mydb.db
+               
+              ADD-MIGRATION INITIAL1
+              UPDATE-DATABASE
+              
+              OR
+         
               REMOVE-MIGRATION INITIAL1
               ADD-MIGRATION INITIAL2
               
