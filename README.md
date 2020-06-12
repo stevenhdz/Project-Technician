@@ -77,7 +77,19 @@ Project Technician 2020 ☺️👌🏻
           
               <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
               
+ 🦾 Execute:
+ 
+         VSCODE:
               
+              Important sdk 3.1.x
+                
+              CD /
+              dotnet run
+              
+         CODE GENERATION:
+         
+              ADD-MIGRATION INITIAL2
+              UPDATE-DATABASE
                
    
    
