@@ -89,7 +89,7 @@ Project Technician 2020 ☺️👌🏻
               
          CODE GENERATION:
          
-              POSIBLE ERROR SOLUTION
+              POSSIBLE ERROR SOLUTION
                 DELETE FOLDER MIGRATIONS
                 DELETE AND DROP DATABASE Mydb.db
                
