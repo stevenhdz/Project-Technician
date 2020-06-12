@@ -19,8 +19,15 @@ Project Technician 2020 ☺️👌🏻
           html
    
   🦾 Techniques:
-   
-          mvc+vm: scheme ->
+          
+          mvc+vm scheme:          
+                             
+                             <-----------------------------|
+                          Views <--- Controllers ---> ViewModels ----> Models ----> Database
+                            |             |               |             |
+                         Response    Client Side       VistasDB         DB                
+          
+          
           ORM -> EntityFrameworkcore 3.x
               
   🦾 BaseData:
