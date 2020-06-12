@@ -89,7 +89,10 @@ Project Technician 2020 ☺️👌🏻
               
          CODE GENERATION:
          
+              REMOVE-MIGRATION INITIAL1
               ADD-MIGRATION INITIAL2
+              
+              DROP-DATABASE
               UPDATE-DATABASE
                
    
