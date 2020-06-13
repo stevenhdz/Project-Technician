@@ -47,8 +47,14 @@
                                                     |                                 | 
                                                     |_________________________________|
                                                     
-**ORM ENTITYFRAMEWORK CORE:**
-                              
+**ORM:**
+
+- [ ] Dapper
+- [x] Entity Framework core
+- [ ] Entity Framework
+
+**Methods ORM**
+
 - [x] Code first
 - [ ] Database first
 - [ ] Model first
