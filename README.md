@@ -73,6 +73,7 @@ Development environments and tools:
 - [x] Visual studio
 - [x] DB browser for SQlite
 - [x] SQlite Studio
+- [x] SQL Server Management Studio
 
 Operating systems:
 
