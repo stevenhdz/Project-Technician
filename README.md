@@ -5,11 +5,11 @@
 
 🗒 Frameworks:
 
-> asp.net core 3.x -> future -> Blazor in progress
+          asp.net core 3.x -> future -> Blazor in progress
    
   🆓 Licence: 
   
-         MIT
+          MIT
           
 ©️#️⃣ Languages: 
    
@@ -114,7 +114,7 @@
  
          VSCODE:
               
-              Important sdk 3.1.x
+              Important sdk '3.1.x'
                 
               CD Project_technician
               dotnet run
