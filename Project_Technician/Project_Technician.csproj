@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>aspnet-MvcCoreUploadAndDisplayImage_Demo-DC2E052E-D7AA-499E-9A67-80966C982803</UserSecretsId>
+    <UserSecretsId>Project-Technician-DC2E052E-D7AA-499E-9A67-80966C982803</UserSecretsId>
   </PropertyGroup>
 
 
