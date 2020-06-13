@@ -3,7 +3,7 @@
 ### In Progress - Any time, I finish 🛠⚙️ if it compiles it can get an error
 
 
-🗒 Framework Web:
+Framework Web:
 
 - [ ] Blazor
 - [x] Asp.net Core
@@ -14,17 +14,17 @@ Framework, tools and libraries
 - [x] .Net core
 - [ ] .Net 
 
-🆓 Licence: 
+Licence: 
   
-- MIT
+- [x] MIT
           
-©️#️⃣ Languages: 
+Languages: 
    
 - [x] JAVASCRIPT
 - [x] C#
 - [x] CSS/HTML
    
-🧰 Techniques:
+Techniques:
 
 - [x] MVC
 - [x] MVVM
@@ -89,7 +89,7 @@ Collaboration tools:
 - [x] Discord
 - [x] IIS
   
-📕 Libraries integrate - no integrate the project online: 
+Libraries integrate - no integrate the project online: 
   
           dataannotations: EF CORE
           
