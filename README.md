@@ -40,7 +40,7 @@ Project Technician 2020 ☺️👌🏻
               
                             Class ----➡️ EF CORE ----➡️ DATABASE
               
-              Dataannotations: Library
+              Data annotations: Library
               
   
    🆔 BaseData:
@@ -81,6 +81,10 @@ Project Technician 2020 ☺️👌🏻
               <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.5" />
               <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
               <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.5" />
+              
+          Install nugets vscode:
+              
+                               dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 
           jquery:
               
@@ -113,14 +117,17 @@ Project Technician 2020 ☺️👌🏻
               
               Important sdk 3.1.x
                 
-              CD /
+              CD Project_technician
               dotnet run
               
          CODE GENERATION:
          
               POSSIBLE ERROR SOLUTION
+                dotnet tool install --global dotnet-ef
+                DOTNET HELP
                 DELETE FOLDER MIGRATIONS
                 DELETE AND DROP DATABASE Mydb.db
+                DELETE OBJ & EXECUTE DOTNET RESTORE
                
               ADD-MIGRATION INITIAL1
               UPDATE-DATABASE
@@ -143,14 +150,11 @@ Project Technician 2020 ☺️👌🏻
               dotnet run
               
              _____________________ 
-              PM> Add-Migration [migration name]
-PM> Update-Database
-Alternatively, you can scaffold a new migration and apply it from a command prompt at your project directory:
-
-> dotnet ef migrations add [migration name]
-> dotnet ef database update
+            
+dotnet ef migrations add [migration name]
+dotnet ef database update
               
-________________________
+_________3 modos de trabajo principales de Entity Framework_______________
                
 ☠️ Create by SLTECHNOLOGY ☠️
 
