@@ -60,7 +60,7 @@ ORM ENTITYFRAMEWORK CORE:
 DataBase:
       
 - [x] SQlite
-- [ ] SQL server
+- [x] SQL server
 
   
 Platforms: 
