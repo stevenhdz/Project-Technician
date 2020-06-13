@@ -5,7 +5,9 @@
 
 🗒 Frameworks:
 
-- asp.net core 3.x -> future -> Blazor in progress
+- [x] ASP.NET CORE
+- [ ] ASP.NET FRAMEWORK
+
 
 🆓 Licence: 
   
