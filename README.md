@@ -1,8 +1,7 @@
-# Project-Technician
+# Project-Technician ☺️👌🏻
 
-# In Progress - Any time, I finish 🛠⚙️
+# In Progress - Any time, I finish 🛠⚙️ if it compiles it can get an error
 
-Project Technician 2020 ☺️👌🏻
 
 🗒 Frameworks:
 
@@ -71,7 +70,7 @@ Project Technician 2020 ☺️👌🏻
           nugets:
           
                     
-                    Update: in the commit version 3.1.* for up
+          Update: in the commit version 3.1.* for up
 
               <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.5" />
               <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.5" />
