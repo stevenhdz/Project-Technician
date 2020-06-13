@@ -158,48 +158,50 @@ _____________________________________________________________________
               
  **Execute:**
  
-         VSCODE:
-              
-              Important sdk '3.1.x'
-                
-              CD Project_technician
-              dotnet run
-              
-         CODE GENERATION:
+ 
+ 
+ **VSCODE:**
          
-              POSSIBLE ERROR SOLUTION
-                dotnet tool install --global dotnet-ef
+         RUN:
+         
+         
+         dotnet ef migrations add [migration name]
+         dotnet ef database update
+         cd Project_technician
+         dotnet run
+         
+         
+         
+**VISUAL STUDIO:**
+         
+         RUN:
+         
+         add-migration [migration name]
+         update-database
+         boton run
+         
+              
+              
+              
+
+**POSSIBLE ERROR SOLUTION**
+
+                DOTNET TOOL INSTALL --GLOBAL DOTNET-EF
                 DOTNET HELP
                 DELETE FOLDER MIGRATIONS
                 DELETE AND DROP DATABASE Mydb.db
                 DELETE OBJ & EXECUTE DOTNET RESTORE
-               
-              ADD-MIGRATION INITIAL1
-              UPDATE-DATABASE
+                REMOVE-MIGRATION INITIAL1
+                DROP-DATABASE
+
               
-              OR
-         
-              REMOVE-MIGRATION INITIAL1
-              ADD-MIGRATION INITIAL2
-              
-              DROP-DATABASE
-              UPDATE-DATABASE
-              
-          VISUAL STUDIO:
-          
-              SQUAL TO CODE GENRATION EXCEPT
-              
-              Important sdk 3.1.x
-                
-              CD /
-              dotnet run
-              
-             _____________________ 
+**Errors Report**
+
+                FIX
             
-dotnet ef migrations add [migration name]
-dotnet ef database update
+
               
-_________3 modos de trabajo principales de Entity Framework_______________
+
                
 ☠️ Create by SLTECHNOLOGY ☠️
 
