@@ -18,7 +18,11 @@
 - html
    
 🧰 Techniques:
-  
+
+- [x] MVC
+- [x] MVVM
+- [ ] MVT
+
 - mvc+vm scheme:          
 
 
