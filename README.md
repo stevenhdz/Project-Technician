@@ -3,7 +3,7 @@
 ### In Progress - Any time, I finish 🛠⚙️ if it compiles it can get an error
 
 
-Framework Web:
+**Framework Web:
 
 - [ ] Blazor
 - [x] Asp.net Core
