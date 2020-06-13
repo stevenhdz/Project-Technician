@@ -9,13 +9,13 @@
    
   🆓 Licence: 
   
-          MIT
+- MIT
           
 ©️#️⃣ Languages: 
    
-          c#
-          Javascript
-          html
+- c#
+- Javascript
+- html
    
   🧰 Techniques:
   
