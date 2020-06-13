@@ -6,8 +6,8 @@
 🗒 Frameworks:
 
 - [ ] Blazor
-- [x] ASP.NET CORE
-- [ ] ASP.NET FRAMEWORK
+- [x] Asp.net Core
+- [ ] Asp.net Framework
 
 
 🆓 Licence: 
