@@ -5,7 +5,7 @@
 
 🗒 Frameworks:
 
-          asp.net core 3.x -> future -> Blazor in progress
+- asp.net core 3.x -> future -> Blazor in progress
    
   🆓 Licence: 
   
@@ -20,7 +20,7 @@
   🧰 Techniques:
   
                                                                    ORM
-          mvc+vm scheme:                            ___________________________________
+- mvc+vm scheme:                                    ___________________________________
                                                     |                                 |
                             |-----------------------|------|                          |
                             |                       |      |                          |
