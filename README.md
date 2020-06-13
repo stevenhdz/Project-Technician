@@ -47,7 +47,7 @@
                                                     |                                 | 
                                                     |_________________________________|
                                                     
-**ORM:**
+**Micro ORM or ORM:**
 
 - [ ] Dapper
 - [x] Entity Framework core
