@@ -8,12 +8,12 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
-using MvcCoreUploadAndDisplayImage_Demo.Data;
+using Project_Technician.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace MvcCoreUploadAndDisplayImage_Demo
+namespace Project_Technician
 {
     public class Startup
     {

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using MvcCoreUploadAndDisplayImage_Demo.Models;
+using Project_Technician.Models;
 
 
-namespace MvcCoreUploadAndDisplayImage_Demo.Data
+namespace Project_Technician.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {

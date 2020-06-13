@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using MvcCoreUploadAndDisplayImage_Demo.Data;
-using MvcCoreUploadAndDisplayImage_Demo.Models;
+using Project_Technician.Data;
+using Project_Technician.Models;
 
-namespace MvcCoreUploadAndDisplayImage_Demo.Controllers
+namespace Project_Technician.Controllers
 {
     public class EmployeController : Controller
     {

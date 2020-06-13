@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MvcCoreUploadAndDisplayImage_Demo.Models
+namespace Project_Technician.Models
 {
     public class Employee
     {

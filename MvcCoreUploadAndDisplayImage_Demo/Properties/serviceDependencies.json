@@ -2,7 +2,7 @@
   "dependencies": {
     "mssql1": {
       "type": "mssql",
-      "connectionId": "MvcCoreUploadAndDisplayImage_DemoContext"
+      "connectionId": "Project_TechnicianContext"
     }
   }
 }

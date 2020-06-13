@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System;
 
-namespace MvcCoreUploadAndDisplayImage_Demo.ViewModels
+namespace Project_Technician.ViewModels
 {
     public class EmployeeViewModel
     {

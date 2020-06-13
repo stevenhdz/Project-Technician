@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MvcCoreUploadAndDisplayImage_Demo.Data;
-using MvcCoreUploadAndDisplayImage_Demo.Models;
-using MvcCoreUploadAndDisplayImage_Demo.ViewModels;
+using Project_Technician.Data;
+using Project_Technician.Models;
+using Project_Technician.ViewModels;
 using System;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace MvcCoreUploadAndDisplayImage_Demo.Controllers
+namespace Project_Technician.Controllers
 {
     public class HomeController : Controller
     {

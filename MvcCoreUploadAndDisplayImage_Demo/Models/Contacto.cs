@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace MvcCoreUploadAndDisplayImage_Demo.Models
+namespace Project_Technician.Models
 {
     public class Contacto
     {

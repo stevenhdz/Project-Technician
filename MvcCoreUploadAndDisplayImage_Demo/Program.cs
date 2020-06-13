@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace MvcCoreUploadAndDisplayImage_Demo
+namespace Project_Technician
 {
     public class Program
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace MvcCoreUploadAndDisplayImage_Demo.Models
+namespace Project_Technician.Models
 {
     public class ErrorViewModel
     {
