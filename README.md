@@ -30,6 +30,12 @@
 - [x] MVVM
 - [ ] MVT
 
+**SCAFFOLDING**
+- [x] Controllers
+- [x] Views
+- [x] Models
+- [x] ViewsModels
+
 - mvc+vm scheme:          
 
 
