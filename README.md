@@ -3,12 +3,16 @@
 ### In Progress - Any time, I finish 🛠⚙️ if it compiles it can get an error
 
 
-🗒 Frameworks:
+🗒 Framework Web:
 
 - [ ] Blazor
 - [x] Asp.net Core
-- [ ] Asp.net Framework
+- [ ] Asp.net
 
+Framework, tools and libraries
+
+- [x] .Net core
+- [ ] .Net 
 
 🆓 Licence: 
   
@@ -16,9 +20,9 @@
           
 ©️#️⃣ Languages: 
    
-- c#
-- Javascript
-- html
+- [x] JAVASCRIPT
+- [x] C#
+- [x] CSS/HTML
    
 🧰 Techniques:
 
@@ -42,31 +46,47 @@
                          Response    Client Side    |   VistasDB           DB         |       
                                                     |                                 | 
                                                     |_________________________________|
-          
-⚙️®️Ⓜ️ -> EntityFrameworkcore 3.x
+                                                    
+ORM ENTITYFRAMEWORK CORE:
                               
 - [x] Code first
 - [ ] Database first
 - [ ] Model first
               
-                            Class ----➡️ EF CORE ----➡️ DATABASE
+                          Class ----➡️ EF CORE ----➡️ DATABASE
               
-- Data annotations: Library
+**Data annotations: Library**
               
-🆔 BaseData:
+DataBase:
       
-- SQlite
+- [x] SQlite
+- [ ] SQL server
+
   
-🦾 Platforms: 
-      
-- Web
+Platforms: 
+
+- [x] Azure
    
-🛠 Tools:
-   
-- Visual studio code
-- Visual studio
-- DB browser for SQlite
-- SQlite Studio
+Development environments and tools:
+
+- [x] Visual studio code
+- [x] Visual studio
+- [x] DB browser for SQlite
+- [x] SQlite Studio
+
+Operating systems:
+
+- [x] Windows
+- [x] Mac OS
+- [ ] Linux
+
+Collaboration tools:
+
+- [x] Github
+- [x] Notion
+- [x] Azure
+- [x] Discord
+- [x] IIS
   
 📕 Libraries integrate - no integrate the project online: 
   
