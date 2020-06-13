@@ -1,0 +1,116 @@
+﻿@model IEnumerable<Project_technician.Models.Contacto>
+
+@{
+    ViewData["Title"] = "BANDEJA DE ENTRADA - ";
+}
+
+
+
+
+
+
+<div class="col-sm-3">
+
+    <p data-toggle="modal" data-target="#basicExampleModal">
+    <p class="btn btn-primary">
+        CORREOS RECIBIDOS
+    </p>
+    </p>
+
+</div>
+
+
+
+
+
+<tbody>
+
+
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <div class="col-sm-3">
+                <td>
+                    <p data-toggle="modal" data-target="#basicExampleModal">
+                        <button type="button" class="btn btn-danger">
+                            <i class="far fa-envelope"></i>
+
+                        </button>
+                    </p>
+                </td>
+            </div>
+
+            <td>
+                <!-- Modal -->
+                <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+
+
+                                    <p class="font-weight-light">
+                                        <br>
+                                        <i class="fa fa-users"></i>
+                                        @Html.DisplayFor(modelItem => item.Name)
+                                        <br type="email">
+                                        <i class="fa fa-inbox"></i>
+                                        @Html.DisplayFor(modelItem => item.Mail)
+                                        <br>
+                                        <i class="fa fa-phone"></i>
+                                        @Html.DisplayFor(modelItem => item.Phone)
+                                        <br>
+                                    </p>
+
+
+
+
+                                </h5>
+
+                            </div>
+                            <div class="modal-body">
+
+                                Solicitud:
+                                <p class="font-weight-light text-justify">
+                                    <b>
+                                        @Html.DisplayFor(modelItem => item.Mensaje)
+                                    </b>
+                                </p>
+
+
+                            </div>
+                            <div class="row">
+                                <a asp-action="Delete" asp-route-id="@item.IdContact">
+                                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash fa-sm"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+
+
+    }
+
+
+
+</tbody>
+
+
+
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+
+<script>
+  $('i').click(function() {
+  $(this).toggleClass('fa-envelope-open');
+});
+</script>
