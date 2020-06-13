@@ -5,6 +5,7 @@
 
 🗒 Frameworks:
 
+- [ ] Blazor
 - [x] ASP.NET CORE
 - [ ] ASP.NET FRAMEWORK
 
