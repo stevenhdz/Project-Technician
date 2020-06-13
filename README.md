@@ -38,7 +38,9 @@
           
 ⚙️®️Ⓜ️ -> EntityFrameworkcore 3.x
                               
-*Model*: 'Code first'
+- [x] Code first
+- [ ] Database first
+- [ ] Model first
               
                             Class ----➡️ EF CORE ----➡️ DATABASE
               
