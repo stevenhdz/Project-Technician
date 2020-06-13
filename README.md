@@ -9,22 +9,22 @@
 - [x] Asp.net Core
 - [ ] Asp.net
 
-Framework, tools and libraries
+**Framework, tools and libraries**
 
 - [x] .Net core
 - [ ] .Net 
 
-Licence: 
+**Licence:** 
   
 - [x] MIT
           
-Languages: 
+**Languages:**
    
 - [x] JAVASCRIPT
 - [x] C#
 - [x] CSS/HTML
    
-Techniques:
+**Techniques:**
 
 - [x] MVC
 - [x] MVVM
@@ -47,7 +47,7 @@ Techniques:
                                                     |                                 | 
                                                     |_________________________________|
                                                     
-ORM ENTITYFRAMEWORK CORE:
+**ORM ENTITYFRAMEWORK CORE:**
                               
 - [x] Code first
 - [ ] Database first
@@ -57,17 +57,17 @@ ORM ENTITYFRAMEWORK CORE:
               
 **Data annotations: Library**
               
-DataBase:
+**DataBase:**
       
 - [x] SQlite
 - [x] SQL server
 
   
-Platforms: 
+**Platforms:**
 
 - [x] Azure
    
-Development environments and tools:
+**Development environments and tools:**
 
 - [x] Visual studio code
 - [x] Visual studio
@@ -75,13 +75,13 @@ Development environments and tools:
 - [x] SQlite Studio
 - [x] SQL Server Management Studio
 
-Operating systems:
+**Operating systems:**
 
 - [x] Windows
 - [x] Mac OS
 - [ ] Linux
 
-Collaboration tools:
+**Collaboration tools:**
 
 - [x] Github
 - [x] Notion
@@ -89,7 +89,7 @@ Collaboration tools:
 - [x] Discord
 - [x] IIS
   
-Libraries integrate - no integrate the project online: 
+**Libraries integrate - no integrate the project online:**
   
           dataannotations: EF CORE
           
@@ -121,7 +121,7 @@ Libraries integrate - no integrate the project online:
               
               jQuery JavaScript Library v3.3.1
  
-🦾 Extras:
+ **Extras:**
  
           css:
           
@@ -142,7 +142,7 @@ Libraries integrate - no integrate the project online:
           
               <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
               
- ⏯ Execute:
+ **Execute:**
  
          VSCODE:
               
