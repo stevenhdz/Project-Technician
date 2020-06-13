@@ -123,6 +123,8 @@ Project Technician 2020 ☺️👌🏻
          CODE GENERATION:
          
               POSSIBLE ERROR SOLUTION
+                dotnet tool install --global dotnet-ef
+                DOTNET HELP
                 DELETE FOLDER MIGRATIONS
                 DELETE AND DROP DATABASE Mydb.db
                 DELETE OBJ & EXECUTE DOTNET RESTORE
