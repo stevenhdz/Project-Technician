@@ -1,0 +1,225 @@
+﻿@model IEnumerable<MvcCoreUploadAndDisplayImage_Demo.Models.Employee>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+@{
+    Layout = "_Layout";
+}
+
+
+<center><h1 class="font-weight-light">Lista de Servicios</h1></center>
+
+<style>
+
+
+    .table-earnings {
+        background: #F3F5F6;
+    }
+
+    table {
+        display: block;
+        height: 650px;
+        overflow-y: auto;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #myInput {
+        background-image: url('/css/searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+    }
+
+    #myTable {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid #ddd;
+        font-size: 18px;
+    }
+
+        #myTable th, #myTable td {
+            text-align: left;
+            padding: 12px;
+        }
+
+        #myTable tr {
+            border-bottom: 1px solid #ddd;
+        }
+
+            #myTable tr.header, #myTable tr:hover {
+                background-color: #f1f1f1;
+            }
+</style>
+
+
+<p>
+    <a asp-action="New" class="btn btn-sm text-light bg-primary rounded-0 text-uppercase"><i class="fas fa-plus-circle"></i>Agregar</a>
+    <a href="../Employe/Index" class="btn btn-sm text-light bg-danger rounded-0 text-uppercase"><i class="fas fa-plus-circle"></i>Editar</a>
+</p>
+
+
+
+<!--filtrar por id="myTable-->
+<center>
+    <div class="col-md-4 form-control info-color">
+        <input class="form-control my-0 py-1 amber-border" type="text" id="myInput" onkeyup="myFunction()" placeholder="Filtrar" title="Filtrar">
+    </div>
+</center>
+
+
+<table id="myTable" class="table text-monospace text-uppercase table-striped table-bordered"
+       width="300">
+
+
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullNombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cedula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaIngreso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaEntrega)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Serial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GarantiaMarca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GarantiaTecnica)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoServicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorPagar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CantidadEquipos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroCelular)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Correos)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>
+
+                    <a href="~/images/@employee.ProfilePicture"
+                       class="rounded-circle"
+                       height="50" width="50"
+                       asp-append-version="true">
+
+
+                        <img src="~/images/@employee.ProfilePicture"
+                             height="50" width="50"
+                             asp-append-version="true" />
+                    </a>
+                    <br />
+                    @employee.FullNombre
+
+                </td>
+                <td>
+                    @employee.Cedula
+                </td>
+                <td>
+                    @employee.direccion
+                </td>
+                <td>
+                    @employee.FechaIngreso
+                </td>
+                <td>
+                    @employee.FechaEntrega
+                </td>
+                <td>
+                    @employee.Tipo
+                </td>
+                <td>
+                    @employee.Serial
+                </td>
+                <td>
+                    @employee.Marca
+                </td>
+                <td>
+                    @employee.Descripcion
+                </td>
+                <td>
+                    @employee.GarantiaMarca
+                </td>
+                <td>
+                    @employee.GarantiaTecnica
+                </td>
+                <td>
+                    @employee.TipoServicio
+                </td>
+                <td>
+                    @employee.ValorPagar
+                </td>
+                <td>
+                    @employee.CantidadEquipos
+                </td>
+                <td>
+                    @employee.NumeroCelular
+                </td>
+                <td>
+                    @employee.Correos
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<script>function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+    </script>

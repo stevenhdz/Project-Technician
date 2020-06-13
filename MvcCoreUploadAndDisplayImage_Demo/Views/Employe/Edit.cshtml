@@ -1,0 +1,192 @@
+
+
+@model MvcCoreUploadAndDisplayImage_Demo.Models.Employee
+
+
+
+<div class="col-md-10 mx-auto py-4">
+    <div class="card">
+        <div class="card-header bg-primary text-uppercase text-white">
+            <h4>CREAR FORMULARIO</h4>
+        </div>
+        <div class="card-body">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdPersona" />
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <input asp-for="Nombre" class="form-control" placeholder="Nombre" autocomplete="off" />
+                            <span asp-validation-for="Nombre" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <input asp-for="Apellido" class="form-control" placeholder="Apellido" autocomplete="off" />
+                            <span asp-validation-for="Apellido" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <input asp-for="Cedula" class="form-control" placeholder="Cedula" autocomplete="off" />
+                            <span asp-validation-for="Cedula" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <input asp-for="direccion" class="form-control" placeholder="Direccion" autocomplete="off" />
+                            <span asp-validation-for="direccion" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input asp-for="Correos" class="form-control" placeholder="Correo" autocomplete="off" />
+                            <span asp-validation-for="Correos" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <select asp-for="Tipo" class="form-control" autocomplete="off">
+                                <option value="">Tipo Servicio</option>
+                                <option value="Portatil">Portatil</option>
+                                <option value="Pc Mesa">Pc Mesa</option>
+                                <option value="Camaras">Camaras</option>
+                                <option value="Servidores">Servidores</option>
+                                <option value="DVR">DVR</option>
+                            </select>
+                            <span asp-validation-for="Tipo" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <input asp-for="Serial" class="form-control" placeholder="Serial" autocomplete="off" />
+                            <span asp-validation-for="Serial" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <select asp-for="Marca" class="form-control">
+                                <option value="">Marca Equipo</option>
+                                <option value="Gateway">Gateway</option>
+                                <option value="Acer">Acer</option>
+                                <option value="Lenovo">Lenovo</option>
+                                <option value="Dell">Dell</option>
+                                <option value="Apple">Apple</option>
+                                <option value="Hp">Hp</option>
+                                <option value="Sony">Sony</option>
+                                <option value="Toshiba">Toshiba</option>
+                                <option value="Asus">Asus</option>
+                                <option value="Generico">Generico</option>
+                            </select>
+                            <span asp-validation-for="Marca" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <select asp-for="GarantiaMarca" class="form-control">
+                                <option value="">Tiene garantia</option>
+                                <option value="No">No</option>
+                                <option value="Si">Si</option>
+                            </select>
+                            <span asp-validation-for="GarantiaMarca" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <select asp-for="GarantiaTecnica" class="form-control">
+                                <option value="">Tiene garantia</option>
+                                <option value="No">No</option>
+                                <option value="Si">Si</option>
+                            </select>
+                            <span asp-validation-for="GarantiaTecnica" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <input asp-for="NumeroCelular" class="form-control" placeholder="Numero Contacto" autocomplete="off" />
+                            <span asp-validation-for="NumeroCelular" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <input asp-for="CantidadEquipos" class="form-control" placeholder="Cantidad de Equipos" autocomplete="off" />
+                            <span asp-validation-for="CantidadEquipos" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <input asp-for="ValorPagar" class="form-control" placeholder="Valor a cobrar" autocomplete="off" />
+                            <span asp-validation-for="ValorPagar" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <select asp-for="TipoServicio" class="form-control">
+                                <option value="">Seleccione Servicio</option>
+                                <option value="Instalacion">Instalacion</option>
+                                <option value="Configuracion">Configuracion</option>
+                                <option value="Mantenimiento preventiv">Mantenimiento preventivo</option>
+                                <option value="Diagnostico">Diagnostico</option>
+                                <option value="Reparacion">Reparacion</option>
+                            </select>
+                            <span asp-validation-for="TipoServicio" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input asp-for="FechaIngreso" class="form-control" placeholder="Fecha Ingreso" autocomplete="off" />
+                            <span asp-validation-for="FechaIngreso" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input asp-for="FechaEntrega" class="form-control" placeholder="Fecha Entrega" autocomplete="off" />
+                            <span asp-validation-for="FechaEntrega" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <textarea asp-for="Descripcion" class="form-control" rows="10" placeholder="Descripcion" autocomplete="off" aria-label="With textarea"></textarea>
+                            <span asp-validation-for="Descripcion" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input asp-for="ProfilePicture" class="form-control"/>
+                            <span asp-validation-for="ProfilePicture" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Ingresar" class="btn btn-sm btn-primary rounded-0 text-uppercase" />
+                    <a asp-action="Index" class="btn btn-sm btn-primary rounded-0 text-uppercase"><i class="fas fa-fast-backward"></i>Atras</a>
+                </div>
+        </form>
+ </div>
+    </div>
+</div>
+
+
+
+
+@section scripts{
+    <script type="text/javascript">
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function () {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
+}
