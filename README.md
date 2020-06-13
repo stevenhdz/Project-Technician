@@ -6,8 +6,8 @@
 🗒 Frameworks:
 
 - asp.net core 3.x -> future -> Blazor in progress
-   
-  🆓 Licence: 
+
+🆓 Licence: 
   
 - MIT
           
@@ -17,9 +17,11 @@
 - Javascript
 - html
    
-  🧰 Techniques:
+🧰 Techniques:
   
-- mvc+vm scheme:                                                             
+- mvc+vm scheme:          
+
+
                                                                    ORM
                                                     ___________________________________
                                                     |                                 |
@@ -34,31 +36,30 @@
                                                     |                                 | 
                                                     |_________________________________|
           
-   ⚙️®️Ⓜ️ -> EntityFrameworkcore 3.x
+⚙️®️Ⓜ️ -> EntityFrameworkcore 3.x
                               
-              Model: Code first
+*Model*: 'Code first'
               
                             Class ----➡️ EF CORE ----➡️ DATABASE
               
-              Data annotations: Library
+- Data annotations: Library
               
-  
-   🆔 BaseData:
+🆔 BaseData:
       
-          SQlite
+- SQlite
   
-  🦾 Platforms: 
+🦾 Platforms: 
       
-          Web
+- Web
    
-  🛠 Tools:
+🛠 Tools:
    
-          Visual studio code
-          Visual studio
-          DB browser for SQlite
-          SQlite Studio
+- Visual studio code
+- Visual studio
+- DB browser for SQlite
+- SQlite Studio
   
-  📕 Libraries integrate - no integrate the project online: 
+📕 Libraries integrate - no integrate the project online: 
   
           dataannotations: EF CORE
           
