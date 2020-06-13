@@ -1,27 +1,48 @@
-# Project-Technician
+# Project-Technician ☺️👌🏻
 
-# In Progress - Any time, I finish 🛠⚙️
+### In Progress - Any time, I finish 🛠⚙️ if it compiles it can get an error
 
-Project Technician 2020 ☺️👌🏻
+_____________________________________________________________________
 
-🗒 Frameworks:
 
-          asp.net core 3.x -> future -> Blazor in progress
-   
-  🆓 Licence: 
+**Framework Web:**
+
+- [ ] Blazor
+- [x] Asp.net Core
+- [ ] Asp.net
+
+**Framework, tools and libraries**
+
+- [x] .Net core
+- [ ] .Net 
+
+**Licence:** 
   
-         MIT
+- [x] MIT
           
-©️#️⃣ Languages: 
+**Languages:**
    
-          c#
-          Javascript
-          html
+- [x] JAVASCRIPT
+- [x] C#
+- [x] CSS/HTML
    
-  🧰 Techniques:
-  
+**Techniques:**
+
+- [x] MVC
+- [x] MVVM
+- [ ] MVT
+
+**SCAFFOLDING**
+- [x] Controllers
+- [x] Views
+- [x] Models
+- [x] ViewsModels
+
+- mvc+vm scheme:          
+
+
                                                                    ORM
-          mvc+vm scheme:                            ___________________________________
+                                                    ___________________________________
                                                     |                                 |
                             |-----------------------|------|                          |
                             |                       |      |                          |
@@ -33,32 +54,56 @@ Project Technician 2020 ☺️👌🏻
                          Response    Client Side    |   VistasDB           DB         |       
                                                     |                                 | 
                                                     |_________________________________|
-          
-   ⚙️®️Ⓜ️ -> EntityFrameworkcore 3.x
-                              
-              Model: Code first
+                                                    
+**Micro ORM or ORM:**
+
+- [ ] Dapper
+- [x] Entity Framework core
+- [ ] Entity Framework
+
+**Methods ORM**
+
+- [x] Code first
+- [ ] Database first
+- [ ] Model first
               
-                            Class ----➡️ EF CORE ----➡️ DATABASE
+                          Class ----➡️ EF CORE ----➡️ DATABASE
               
-              Data annotations: Library
+**Data annotations: Library**
               
-  
-   🆔 BaseData:
+**DataBase:**
       
-          SQlite
+- [x] SQlite
+- [x] SQL server
+
   
-  🦾 Platforms: 
-      
-          Web
+**Platforms:**
+
+- [x] Azure
    
-  🛠 Tools:
-   
-          Visual studio code
-          Visual studio
-          DB browser for SQlite
-          SQlite Studio
+**Development environments and tools:**
+
+- [x] Visual studio code
+- [x] Visual studio
+- [x] DB browser for SQlite
+- [x] SQlite Studio
+- [x] SQL Server Management Studio
+
+**Operating systems:**
+
+- [x] Windows
+- [x] Mac OS
+- [ ] Linux
+
+**Collaboration tools:**
+
+- [x] Github
+- [x] Notion
+- [x] Azure
+- [x] Discord
+- [x] IIS
   
-  📕 Libraries integrate - no integrate the project online: 
+**Libraries integrate - no integrate the project online:**
   
           dataannotations: EF CORE
           
@@ -71,7 +116,7 @@ Project Technician 2020 ☺️👌🏻
           nugets:
           
                     
-                    Update: in the commit version 3.1.* for up
+          Update: in the commit version 3.1.* for up
 
               <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.5" />
               <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.5" />
@@ -90,7 +135,7 @@ Project Technician 2020 ☺️👌🏻
               
               jQuery JavaScript Library v3.3.1
  
-🦾 Extras:
+ **Extras:**
  
           css:
           
@@ -111,50 +156,52 @@ Project Technician 2020 ☺️👌🏻
           
               <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
               
- ⏯ Execute:
+ **Execute:**
  
-         VSCODE:
-              
-              Important sdk 3.1.x
-                
-              CD Project_technician
-              dotnet run
-              
-         CODE GENERATION:
+ 
+ 
+ **VSCODE:**
          
-              POSSIBLE ERROR SOLUTION
-                dotnet tool install --global dotnet-ef
+         RUN:
+         
+         
+         dotnet ef migrations add [migration name]
+         dotnet ef database update
+         cd Project_technician
+         dotnet run
+         
+         
+         
+**VISUAL STUDIO:**
+         
+         RUN:
+         
+         add-migration [migration name]
+         update-database
+         boton run
+         
+              
+              
+              
+
+**POSSIBLE ERROR SOLUTION**
+
+                DOTNET TOOL INSTALL --GLOBAL DOTNET-EF
                 DOTNET HELP
                 DELETE FOLDER MIGRATIONS
                 DELETE AND DROP DATABASE Mydb.db
                 DELETE OBJ & EXECUTE DOTNET RESTORE
-               
-              ADD-MIGRATION INITIAL1
-              UPDATE-DATABASE
+                REMOVE-MIGRATION INITIAL1
+                DROP-DATABASE
+
               
-              OR
-         
-              REMOVE-MIGRATION INITIAL1
-              ADD-MIGRATION INITIAL2
-              
-              DROP-DATABASE
-              UPDATE-DATABASE
-              
-          VISUAL STUDIO:
-          
-              SQUAL TO CODE GENRATION EXCEPT
-              
-              Important sdk 3.1.x
-                
-              CD /
-              dotnet run
-              
-             _____________________ 
+**Errors Report**
+
+                FIX
             
-dotnet ef migrations add [migration name]
-dotnet ef database update
+
               
-_________3 modos de trabajo principales de Entity Framework_______________
+
                
 ☠️ Create by SLTECHNOLOGY ☠️
 
