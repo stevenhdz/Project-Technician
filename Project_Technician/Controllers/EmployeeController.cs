@@ -1,12 +1,11 @@
-using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using NPOI.SS.UserModel;
+using NPOI.XSSF.UserModel;
 using Project_Technician.Data;
 using Project_Technician.Models;
 
@@ -164,5 +163,32 @@ namespace Project_Technician.Controllers
             return File(Encoding.UTF8.GetBytes(builder.ToString()), "text/csv", "users.csv");
         }
 
+        public IActionResult Excel()
+        {
+            IWorkbook workbook = new XSSFWorkbook();
+            ISheet sheet = workbook.CreateSheet("My sheet");
+            int rowNumber = 0;
+            IRow row = sheet.CreateRow(rowNumber);
+            ICell cell = row.CreateCell(rowNumber);
+            cell.SetCellValue("Id");
+            cell = row.CreateCell(1);
+            cell.SetCellValue("Name");
+            foreach (var employee in _context.Employees)
+            {
+                rowNumber++;
+                row = sheet.CreateRow(rowNumber);
+                cell = row.CreateCell(0);
+                cell.SetCellValue(employee.IdPersona);
+                cell = row.CreateCell(1);
+                cell.SetCellValue(employee.FullNombre);
+            }
+            using (var stream = new MemoryStream())
+            {
+                workbook.Write(stream);
+                var content = stream.ToArray();
+                return File(content, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "ArticleList");
+            }
+
+        }
     }
 }
