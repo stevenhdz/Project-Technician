@@ -154,10 +154,10 @@ namespace Project_Technician.Controllers
         public IActionResult Csv()
         {
             var builder = new StringBuilder();
-            builder.AppendLine("Id,Username");
+            builder.AppendLine("Id,Username,Identity");
             foreach (var user in _context.Employees)
             {
-                builder.AppendLine($"{user.IdPersona},{user.FullNombre}");
+                builder.AppendLine($"{user.IdPersona},{user.FullNombre},{user.Cedula}");
             }
 
             return File(Encoding.UTF8.GetBytes(builder.ToString()), "text/csv", "users.csv");
@@ -172,7 +172,11 @@ namespace Project_Technician.Controllers
             ICell cell = row.CreateCell(rowNumber);
             cell.SetCellValue("Id");
             cell = row.CreateCell(1);
-            cell.SetCellValue("Name");
+            cell.SetCellValue("Nombre");
+            cell = row.CreateCell(2);
+            cell.SetCellValue("Cedula");
+            cell = row.CreateCell(3);
+            cell.SetCellValue("Direccion");
             foreach (var employee in _context.Employees)
             {
                 rowNumber++;
@@ -181,12 +185,16 @@ namespace Project_Technician.Controllers
                 cell.SetCellValue(employee.IdPersona);
                 cell = row.CreateCell(1);
                 cell.SetCellValue(employee.FullNombre);
+                cell = row.CreateCell(2);
+                cell.SetCellValue(employee.Cedula);
+                cell = row.CreateCell(3);
+                cell.SetCellValue(employee.direccion);
             }
             using (var stream = new MemoryStream())
             {
                 workbook.Write(stream);
                 var content = stream.ToArray();
-                return File(content, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "ArticleList");
+                return File(content, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "ArticleList.xlsx");
             }
 
         }
