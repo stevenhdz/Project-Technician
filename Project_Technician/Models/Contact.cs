@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Project_Technician.Models
 {
-    public class Contacto
+    public class Contact
     {
         [Key]
         public int IdContact { get; set; }

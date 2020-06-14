@@ -10,11 +10,11 @@ using Project_Technician.Models;
 
 namespace Project_Technician.Controllers
 {
-    public class EmployeController : Controller
+    public class EmployeeController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public EmployeController(ApplicationDbContext context)
+        public EmployeeController(ApplicationDbContext context)
         {
             _context = context;
         }
