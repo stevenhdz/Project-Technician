@@ -89,7 +89,7 @@ _____________________________________________________________________
 
 **Document**
 [SQLite](https://www.sqlite.org/datatype3.html)
-[Gestion Proyecto](https://www.notion.so/5cdcc9c16a1646b3bd43396e60c49630?v=6a53e14132434b89a32181f065defbda)
+
 
   
 **Platforms:**
@@ -113,9 +113,9 @@ _____________________________________________________________________
 **Collaboration tools:**
 
 - [x] Github
-- [x] Notion
-- [x] Azure
-- [x] Discord
+- [x] Notion [Managment Project](https://www.notion.so/5cdcc9c16a1646b3bd43396e60c49630?v=6a53e14132434b89a32181f065defbda)
+- [x] Azure 
+- [x] Discord [Streaming project](https://discord.gg/X5xnZ9g)
 - [x] IIS
   
 **Libraries integrate - no integrate the project online:**
