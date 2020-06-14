@@ -4,6 +4,12 @@
 
 _____________________________________________________________________
 
+**Update**
+
+Add data annotation
+
+_____________________________________________________________________
+
 **.gitignore**
 
 - [x] mydb.db
@@ -203,9 +209,8 @@ _____________________________________________________________________
 **Errors Report**
 
                 FIX
-            
-
-              
+                Rename folders Project_Tecnician
+                "Project_Technician", "Project_Technician\Project_Technician.csproj"
 
                
 ☠️ Create by SLTECHNOLOGY ☠️
