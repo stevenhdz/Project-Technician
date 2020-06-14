@@ -6,7 +6,12 @@ using Project_Technician.Models;
 using Project_Technician.ViewModels;
 using System;
 using System.IO;
+using System.Text;
 using System.Threading.Tasks;
+
+using NPOI.HSSF.UserModel;
+using NPOI.XSSF.UserModel;
+using NPOI.SS.UserModel;
 
 namespace Project_Technician.Controllers
 {
@@ -97,6 +102,46 @@ namespace Project_Technician.Controllers
                 }
             }
             return uniqueFileName;
+        }
+
+        public IActionResult Csv()
+        {
+            var builder = new StringBuilder();
+            builder.AppendLine("Id,Username");
+            foreach (var user in dbContext.Employees)
+            {
+                builder.AppendLine($"{user.IdPersona},{user.FullNombre}");
+            }
+
+            return File(Encoding.UTF8.GetBytes(builder.ToString()), "text/csv", "users.csv");
+        }
+
+        public IActionResult Excel()
+        {
+            IWorkbook workbook = new XSSFWorkbook();
+            ISheet sheet = workbook.CreateSheet("My sheet");
+            int rowNumber = 0;
+            IRow row = sheet.CreateRow(rowNumber);
+            ICell cell = row.CreateCell(rowNumber);
+            cell.SetCellValue("Id");
+            cell = row.CreateCell(1);
+            cell.SetCellValue("Name");
+            foreach (var employee in dbContext.Employees)
+            {
+                rowNumber++;
+                row = sheet.CreateRow(rowNumber);
+                cell = row.CreateCell(0);
+                cell.SetCellValue(employee.IdPersona);
+                cell = row.CreateCell(1);
+                cell.SetCellValue(employee.FullNombre);
+            }
+            using (var stream = new MemoryStream())
+            {
+                workbook.Write(stream);
+                var content = stream.ToArray();
+                return File(content, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "ArticleList");
+            }
+
         }
     }
 }

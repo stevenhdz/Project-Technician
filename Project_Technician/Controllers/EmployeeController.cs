@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -149,5 +151,18 @@ namespace Project_Technician.Controllers
         {
             return _context.Employees.Any(e => e.IdPersona == id);
         }
+
+        public IActionResult Csv()
+        {
+            var builder = new StringBuilder();
+            builder.AppendLine("Id,Username");
+            foreach (var user in _context.Employees)
+            {
+                builder.AppendLine($"{user.IdPersona},{user.FullNombre}");
+            }
+
+            return File(Encoding.UTF8.GetBytes(builder.ToString()), "text/csv", "users.csv");
+        }
+
     }
 }
