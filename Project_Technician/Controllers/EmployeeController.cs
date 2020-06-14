@@ -177,6 +177,8 @@ namespace Project_Technician.Controllers
             cell.SetCellValue("Cedula");
             cell = row.CreateCell(3);
             cell.SetCellValue("Direccion");
+            cell = row.CreateCell(4);
+            cell.SetCellValue("Fecha Ingreso");
             foreach (var employee in _context.Employees)
             {
                 rowNumber++;
@@ -189,6 +191,8 @@ namespace Project_Technician.Controllers
                 cell.SetCellValue(employee.Cedula);
                 cell = row.CreateCell(3);
                 cell.SetCellValue(employee.direccion);
+                cell = row.CreateCell(4);
+                cell.SetCellValue(employee.FechaIngreso);
             }
             using (var stream = new MemoryStream())
             {
