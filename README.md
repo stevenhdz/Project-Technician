@@ -4,11 +4,6 @@
 
 _____________________________________________________________________
 
-**Update**
-
-
-
-_____________________________________________________________________
 
 **Design**
 
@@ -100,7 +95,15 @@ _____________________________________________________________________
               
                          
               
-**Data annotations: Library**
+**Data annotations:**
+
+Validation
+
+[Model ASP.NET CORE](https://regexr.com/3bcea)
+
+RegularExpression ("^([3]{1})([0-5]{1})[0-9]{8}", ErrorMessage ="Numero invalido")]
+
+
               
 **DataBase:**
       
