@@ -210,6 +210,9 @@ _____________________________________________________________________
 
                 FIX
                 Rename folders Project_Tecnician
+                🔽
+                Project_Technician.sln
+                🔽
                 "Project_Technician", "Project_Technician\Project_Technician.csproj"
 
                
