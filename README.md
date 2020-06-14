@@ -89,6 +89,8 @@ _____________________________________________________________________
 
 **Document**
 [SQLite](https://www.sqlite.org/datatype3.html)
+[Gestion Proyecto](https://www.notion.so/5cdcc9c16a1646b3bd43396e60c49630?v=6a53e14132434b89a32181f065defbda)
+
   
 **Platforms:**
 
@@ -218,7 +220,7 @@ _____________________________________________________________________
                 "Project_Technician", "Project_Technician\Project_Technician.csproj"
 
                
-☠️ Create by SLTECHNOLOGY ☠️
+# ☠️ Create by SLTECHNOLOGY ☠️
 
    
 
