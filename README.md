@@ -43,6 +43,10 @@ _____________________________________________________________________
 **Licence:** 
   
 - [x] MIT
+
+![alt text](https://janelia-flyem.github.io/images/open_licenses.png)
+
+
           
 **Languages:**
    
