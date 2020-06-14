@@ -87,6 +87,8 @@ _____________________________________________________________________
 - [x] SQlite
 - [x] SQL server
 
+**Document**
+[SQLite](https://www.sqlite.org/datatype3.html)
   
 **Platforms:**
 
