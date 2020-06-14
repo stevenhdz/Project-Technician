@@ -19,6 +19,10 @@ _____________________________________________________________________
 - [x] Left Navigation
 - [x] Footer
 
+
+![alt text](https://docs.microsoft.com/es-es/aspnet/core/mvc/views/layout/_static/page-layout.png?view=aspnetcore-3.1)
+
+
 **.gitignore**
 
 - [x] mydb.db
