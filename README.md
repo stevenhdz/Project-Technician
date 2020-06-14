@@ -87,6 +87,8 @@ _____________________________________________________________________
 - [x] SQlite
 - [x] SQL server
 
+**Document**
+[SQLite](https://www.sqlite.org/datatype3.html)
   
 **Platforms:**
 
@@ -210,6 +212,9 @@ _____________________________________________________________________
 
                 FIX
                 Rename folders Project_Tecnician
+                🔽
+                Project_Technician.sln
+                🔽
                 "Project_Technician", "Project_Technician\Project_Technician.csproj"
 
                
