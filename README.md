@@ -10,6 +10,15 @@ _____________________________________________________________________
 
 _____________________________________________________________________
 
+**Design**
+
+[Model ASP.NET CORE](https://docs.microsoft.com/es-es/aspnet/core/mvc/views/layout?view=aspnetcore-3.1)
+
+- [x] Header
+- [x] Content
+- [x] Left Navigation
+- [x] Footer
+
 **.gitignore**
 
 - [x] mydb.db
