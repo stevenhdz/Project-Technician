@@ -90,8 +90,11 @@ _____________________________________________________________________
 - [x] Code first
 - [ ] Database first
 - [ ] Model first
+
+
+![alt text](https://lh3.googleusercontent.com/proxy/jah7OA0URfdjicruH7YHF5WvYRwxjJneVjtSL16W0oEaQYlwLSwSsE_NLQMsO0ntRBXPtRmGNczWUt_ey6aQGoNezrh78QzvQQ5RZ2Bj7-bymofy)
               
-                          Class ----➡️ EF CORE ----➡️ DATABASE
+                         
               
 **Data annotations: Library**
               
