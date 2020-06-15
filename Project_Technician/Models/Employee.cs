@@ -22,6 +22,7 @@ namespace Project_Technician.Models
         public string Serial { get; set; }
         public string Marca { get; set; }
         public string Descripcion { get; set; }
+        public string Respuesta { get; set; }
         public string GarantiaMarca { get; set; }
         public string GarantiaTecnica { get; set; }
         public string TipoServicio { get; set; }

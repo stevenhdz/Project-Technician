@@ -10,9 +10,9 @@
             <h4>CREAR FORMULARIO</h4>
         </div>
         <div class="card-body">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="IdPersona" />
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="IdPersona" />
                 <div class="row">
                     <div class="col-md-3">
                         <div class="form-group">
@@ -162,9 +162,17 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <div class="form-group">
-                            <input asp-for="ProfilePicture" class="form-control"/>
+                            <textarea asp-for="Respuesta" class="form-control" rows="10" placeholder="Respuesta" autocomplete="off" aria-label="With textarea"></textarea>
+                            <span asp-validation-for="Respuesta" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input asp-for="ProfilePicture" class="form-control" />
                             <span asp-validation-for="ProfilePicture" class="text-danger"></span>
                         </div>
                     </div>
@@ -173,7 +181,7 @@
                     <input type="submit" value="Ingresar" class="btn btn-sm btn-primary rounded-0 text-uppercase" />
                     <a asp-action="Index" class="btn btn-sm btn-primary rounded-0 text-uppercase"><i class="fas fa-fast-backward"></i>Atras</a>
                 </div>
-        </form>
+            </form>
  </div>
     </div>
 </div>

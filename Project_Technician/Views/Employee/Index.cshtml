@@ -114,6 +114,9 @@
                 @Html.DisplayNameFor(model => model.Descripcion)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Respuesta)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.GarantiaMarca)
             </th>
             <th>
@@ -191,6 +194,9 @@
                 @Html.DisplayFor(modelItem => item.Descripcion)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Respuesta)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.GarantiaMarca)
             </td>
             <td>
@@ -200,7 +206,7 @@
                 @Html.DisplayFor(modelItem => item.TipoServicio)
             </td>
             <td>
-               $@Html.DisplayFor(modelItem => item.ValorPagar)
+                $@Html.DisplayFor(modelItem => item.ValorPagar)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CantidadEquipos)

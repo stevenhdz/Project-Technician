@@ -40,6 +40,8 @@ namespace Project_Technician.ViewModels
 
         public string Descripcion { get; set; }
 
+        public string Respuesta { get; set; }
+
         [Required(ErrorMessage = "Garantia Proveedor requerida")]
         public string GarantiaMarca { get; set; }
 

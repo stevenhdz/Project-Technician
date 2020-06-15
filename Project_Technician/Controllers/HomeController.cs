@@ -69,6 +69,7 @@ namespace Project_Technician.Controllers
                     Serial = model.Serial,
                     Marca = model.Marca,
                     Descripcion = model.Descripcion,
+                    Respuesta = model.Respuesta,
                     GarantiaMarca = model.GarantiaMarca,
                     GarantiaTecnica = model.GarantiaTecnica,
                     TipoServicio = model.TipoServicio,
@@ -142,20 +143,22 @@ namespace Project_Technician.Controllers
             cell = row.CreateCell(9);
             cell.SetCellValue("Descripcion");
             cell = row.CreateCell(10);
-            cell.SetCellValue("Garantia Marca");
+            cell.SetCellValue("Descripcion");
             cell = row.CreateCell(11);
-            cell.SetCellValue("Garantia Tecnica");
+            cell.SetCellValue("Garantia Marca");
             cell = row.CreateCell(12);
-            cell.SetCellValue("Tipo Servicio");
+            cell.SetCellValue("Garantia Tecnica");
             cell = row.CreateCell(13);
-            cell.SetCellValue("Valor Pagar");
+            cell.SetCellValue("Tipo Servicio");
             cell = row.CreateCell(14);
-            cell.SetCellValue("Cantidad Equipos");
+            cell.SetCellValue("Valor Pagar");
             cell = row.CreateCell(15);
-            cell.SetCellValue("Numero Celular");
+            cell.SetCellValue("Cantidad Equipos");
             cell = row.CreateCell(16);
-            cell.SetCellValue("Correos");
+            cell.SetCellValue("Numero Celular");
             cell = row.CreateCell(17);
+            cell.SetCellValue("Correos");
+            cell = row.CreateCell(18);
             cell.SetCellValue("ProfilePicture");
             foreach (var employee in dbContext.Employees)
             {
@@ -182,22 +185,24 @@ namespace Project_Technician.Controllers
                 cell = row.CreateCell(9);
                 cell.SetCellValue(employee.Descripcion);
                 cell = row.CreateCell(10);
-                cell.SetCellValue(employee.GarantiaMarca);
+                cell.SetCellValue(employee.Respuesta);
                 cell = row.CreateCell(11);
-                cell.SetCellValue(employee.GarantiaTecnica);
+                cell.SetCellValue(employee.GarantiaMarca);
                 cell = row.CreateCell(12);
-                cell.SetCellValue(employee.TipoServicio);
+                cell.SetCellValue(employee.GarantiaTecnica);
                 cell = row.CreateCell(13);
-                cell.SetCellValue(employee.ValorPagar);
+                cell.SetCellValue(employee.TipoServicio);
                 cell = row.CreateCell(14);
-                cell.SetCellValue(employee.CantidadEquipos);
+                cell.SetCellValue(employee.ValorPagar);
                 cell = row.CreateCell(15);
-                cell.SetCellValue(employee.NumeroCelular);
+                cell.SetCellValue(employee.CantidadEquipos);
                 cell = row.CreateCell(16);
+                cell.SetCellValue(employee.NumeroCelular);
+                cell = row.CreateCell(17);
                 cell.SetCellValue(employee.Correos);
-                cell = row.CreateCell(17);
+                cell = row.CreateCell(18);
                 cell.SetCellValue(employee.ProfilePicture);
-                cell = row.CreateCell(17);
+                cell = row.CreateCell(19);
                 cell.SetCellValue(employee.FechaIngreso);
             }
             using (var stream = new MemoryStream())

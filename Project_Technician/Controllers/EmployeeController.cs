@@ -55,7 +55,7 @@ namespace Project_Technician.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdPersona,FullNombre,Nombre,Apellido,Cedula,direccion,FechaIngreso,FechaEntrega,Tipo,Serial,Marca,Descripcion,GarantiaMarca,GarantiaTecnica,TipoServicio,ValorPagar,CantidadEquipos,NumeroCelular,Correos,ProfilePicture")] Employee employee)
+        public async Task<IActionResult> Create([Bind("IdPersona,FullNombre,Nombre,Apellido,Cedula,direccion,FechaIngreso,FechaEntrega,Tipo,Serial,Marca,Descripcion,Respuesta,GarantiaMarca,GarantiaTecnica,TipoServicio,ValorPagar,CantidadEquipos,NumeroCelular,Correos,ProfilePicture")] Employee employee)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +87,7 @@ namespace Project_Technician.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdPersona,FullNombre,Nombre,Apellido,Cedula,direccion,FechaIngreso,FechaEntrega,Tipo,Serial,Marca,Descripcion,GarantiaMarca,GarantiaTecnica,TipoServicio,ValorPagar,CantidadEquipos,NumeroCelular,Correos,ProfilePicture")] Employee employee)
+        public async Task<IActionResult> Edit(int id, [Bind("IdPersona,FullNombre,Nombre,Apellido,Cedula,direccion,FechaIngreso,FechaEntrega,Tipo,Serial,Marca,Descripcion,Respuesta,GarantiaMarca,GarantiaTecnica,TipoServicio,ValorPagar,CantidadEquipos,NumeroCelular,Correos,ProfilePicture")] Employee employee)
         {
             if (id != employee.IdPersona)
             {
