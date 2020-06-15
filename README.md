@@ -38,6 +38,7 @@ _____________________________________________________________________
 **Licence:** 
   
 - [x] MIT
+- [x] GPL V3
 
 ![alt text](https://janelia-flyem.github.io/images/open_licenses.png)
 
