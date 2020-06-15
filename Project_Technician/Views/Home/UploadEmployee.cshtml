@@ -1,0 +1,30 @@
+﻿@model UploadDataViewModel
+
+@{
+    ViewData["Title"] = "Upload Calls";
+}
+
+<h1>Cargar archivo de empleados</h1>
+<h4>Recuerde que puede cargar un archivo .csv (siempre debe estar delimitado por punto y coma (;))</h4>
+<hr />
+
+<form asp-action="UploadEmployee" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="File" class="control-label"></label>
+        <input asp-for="File" class="form-control" type="file" />
+        <span asp-validation-for="File" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Cargar" class="btn btn-primary" />
+        <a asp-controller="Home" asp-action="Index" class="btn btn-success">Go Back</a>
+    </div>
+</form>
+
+<div class="text-warning">
+    <p>
+        @ViewBag.Message
+    </p>
+</div>

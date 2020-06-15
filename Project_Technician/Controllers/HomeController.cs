@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NPOI.XSSF.UserModel;
 using NPOI.SS.UserModel;
+using System.Collections.Generic;
 
 namespace Project_Technician.Controllers
 {
@@ -202,8 +203,6 @@ namespace Project_Technician.Controllers
                 cell.SetCellValue(employee.Correos);
                 cell = row.CreateCell(18);
                 cell.SetCellValue(employee.ProfilePicture);
-                cell = row.CreateCell(19);
-                cell.SetCellValue(employee.FechaIngreso);
             }
             using (var stream = new MemoryStream())
             {
@@ -212,6 +211,58 @@ namespace Project_Technician.Controllers
                 return File(content, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "employee.xlsx");
             }
 
+        }
+
+        public IActionResult UploadEmployee()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult UploadEmployee(UploadDataViewModel model)
+        {
+            List<Employee> employees = new List<Employee>();
+            try
+            {
+                using (StreamReader reader = new StreamReader(model.File.OpenReadStream()))
+                {
+                    while (reader.Peek() >= 0)
+                    {
+                        string[] entries = (reader.ReadLine()).Split(";");
+                        Employee data = new Employee
+                        {
+                            Nombre = entries[0],
+                            Apellido = entries[1],
+                            Cedula = entries[2],
+                            direccion = entries[3],
+                            FechaIngreso = DateTime.Parse(entries[4]), //Debe estar en el siguiente formato YYYY-MM-DD hh:mm:ss
+                            FechaEntrega = DateTime.Parse(entries[5]), //Debe estar en el siguiente formato YYYY-MM-DD hh:mm:ss
+                            Tipo = entries[6],
+                            Serial = entries[7],
+                            Marca = entries[8],
+                            Descripcion = entries[9],
+                            Respuesta = entries[10],
+                            GarantiaMarca = entries[11],
+                            GarantiaTecnica = entries[12],
+                            TipoServicio = entries[13],
+                            ValorPagar = entries[14],   
+                            CantidadEquipos = entries[15],
+                            NumeroCelular = entries[16],
+                            Correos = entries[17]
+                            //ProfilePicture= entries[18]
+                        };
+                        dbContext.Employees.Add(data);
+                    }
+                }
+                dbContext.SaveChanges();
+                ViewBag.Message = $"The file {model.File.FileName} has been processed successfully!";
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Message = ex.Message;
+            }
+
+            return View(model);
         }
     }
 }
