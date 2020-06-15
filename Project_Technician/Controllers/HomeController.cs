@@ -5,6 +5,7 @@ using Project_Technician.Data;
 using Project_Technician.Models;
 using Project_Technician.ViewModels;
 using System;
+using System.Linq;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
@@ -263,6 +264,19 @@ namespace Project_Technician.Controllers
             }
 
             return View(model);
+        }
+
+        public async Task<IActionResult> TypeStatistics()
+        {
+            List<TypeStatistics> statistics = await dbContext.TypeStatistics
+                .FromSqlRaw(@"
+                    SELECT Tipo, 
+                            COUNT(IdPersona) AS Total
+                    FROM Employee
+                    GROUP BY Tipo
+                 ")
+                .ToListAsync();
+            return View(statistics);
         }
     }
 }
