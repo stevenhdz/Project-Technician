@@ -15,10 +15,10 @@ namespace Project_Technician.ViewModels
         [Required(ErrorMessage = "Apellido requerido")]
         public string Apellido { get; set; }
 
+        [StringLength(10)]
         [Range(10000, 9999999999, ErrorMessage = "Ingrese cedula valida")]
         [Required(ErrorMessage = "Cedula requerida")]
-        public Int64 Cedula { get; set; }
-
+        public string Cedula { get; set; }
 
         [Required(ErrorMessage = "Direccion requerida")]
         public string direccion { get; set; }
@@ -49,14 +49,13 @@ namespace Project_Technician.ViewModels
         [Required(ErrorMessage = "Tip de servicio requerido")]
         public string TipoServicio { get; set; }
 
-        [Range(100, 10000000, ErrorMessage = "Cifras de 100 en adelante")]
+        [DataType(DataType.Currency)]
         [Required(ErrorMessage = "Precio requerido")]
         public string ValorPagar { get; set; }
 
-
         [Range(1, 9999999999, ErrorMessage = "Ingrese numero valido")]
         [Required(ErrorMessage = "Cantidad de equipos")]
-        public Int16 CantidadEquipos { get; set; }
+        public string CantidadEquipos { get; set; }
 
         [StringLength(10)]
         [RegularExpression("^([3]{1})([0-5]{1})[0-9]{8}", ErrorMessage = "Numero invalido")]
