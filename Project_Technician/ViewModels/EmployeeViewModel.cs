@@ -55,7 +55,7 @@ namespace Project_Technician.ViewModels
 
 
         [Range(1, 9999999999, ErrorMessage = "Ingrese numero valido")]
-        [Required(ErrorMessage = "Cantidad de equipos/dispositivos requerido")]
+        [Required(ErrorMessage = "Cantidad de equipos")]
         public Int16 CantidadEquipos { get; set; }
 
         [StringLength(10)]
@@ -68,6 +68,8 @@ namespace Project_Technician.ViewModels
         [EmailAddress(ErrorMessage = "Correo invalido")]
         [DataType(DataType.EmailAddress)]
         public string Correos { get; set; }
+
+        [Required(ErrorMessage = "Imagen requerido")]
         public IFormFile ProfileImage { get; set; }
     }
 }

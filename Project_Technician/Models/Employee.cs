@@ -9,10 +9,6 @@ namespace Project_Technician.Models
     public class Employee
     {
 
-
-        /*[Required(ErrorMessage = "Please enter first name")]
-        [Display(Name = "First Name")]
-        [StringLength(100)] */
         [Key]
         public int IdPersona { get; set; }
         public string FullNombre { get; set; }
