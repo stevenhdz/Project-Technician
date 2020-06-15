@@ -151,22 +151,8 @@ namespace Project_Technician.Controllers
             return _context.Employees.Any(e => e.IdPersona == id);
         }
 
-        public IActionResult Csv()
-        {
-            var builder = new StringBuilder();
-
-            builder.AppendLine("Id,Username,Identity");
-
-                foreach (var user in _context.Employees)
-                {
-                    builder.AppendLine($"{user.IdPersona},{user.Nombre+""+user.Apellido},{user.Cedula}");
-                }
-                return File(Encoding.UTF8.GetBytes(builder.ToString()), "text/csv", "users.csv");
-
-            
-            
-        }
-
         
+
+
     }
 }
