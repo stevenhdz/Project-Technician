@@ -268,14 +268,25 @@ namespace Project_Technician.Controllers
 
         public async Task<IActionResult> TypeStatistics()
         {
-            List<TypeStatistics> statistics = await dbContext.TypeStatistics
-                .FromSqlRaw(@"
-                    SELECT Tipo, 
-                            COUNT(IdPersona) AS Total
-                    FROM Employee
-                    GROUP BY Tipo
-                 ")
-                .ToListAsync();
+            var query = await dbContext.Employees.GroupBy(e => e.Tipo)
+                .Select(e => new
+                {
+                    Tipo = e.Key,
+                    Total = e.Count()
+                }).ToListAsync();
+
+            List<TypeStatistics> statistics = new List<TypeStatistics>();
+
+            foreach (var statistic in query)
+            {
+                TypeStatistics statisticsConverted = new TypeStatistics
+                {
+                    Tipo = statistic.Tipo,
+                    Total = statistic.Total
+                };
+                statistics.Add(statisticsConverted);
+            }
+
             return View(statistics);
         }
     }
