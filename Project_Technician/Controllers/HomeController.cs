@@ -8,8 +8,6 @@ using System;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
-
-using NPOI.HSSF.UserModel;
 using NPOI.XSSF.UserModel;
 using NPOI.SS.UserModel;
 
@@ -112,6 +110,7 @@ namespace Project_Technician.Controllers
             {
                 builder.AppendLine($"{user.IdPersona},{user.FullNombre}");
             }
+            
 
             return File(Encoding.UTF8.GetBytes(builder.ToString()), "text/csv", "users.csv");
         }
@@ -125,7 +124,39 @@ namespace Project_Technician.Controllers
             ICell cell = row.CreateCell(rowNumber);
             cell.SetCellValue("Id");
             cell = row.CreateCell(1);
-            cell.SetCellValue("Name");
+            cell.SetCellValue("Nombre");
+            cell = row.CreateCell(2);
+            cell.SetCellValue("Cedula");
+            cell = row.CreateCell(3);
+            cell.SetCellValue("Direccion");
+            cell = row.CreateCell(4);
+            cell.SetCellValue("Fecha Ingreso");
+            cell = row.CreateCell(5);
+            cell.SetCellValue("Fecha Entrega");
+            cell = row.CreateCell(6);
+            cell.SetCellValue("Tipo");
+            cell = row.CreateCell(7);
+            cell.SetCellValue("Serial");
+            cell = row.CreateCell(8);
+            cell.SetCellValue("Marca");
+            cell = row.CreateCell(9);
+            cell.SetCellValue("Descripcion");
+            cell = row.CreateCell(10);
+            cell.SetCellValue("Garantia Marca");
+            cell = row.CreateCell(11);
+            cell.SetCellValue("Garantia Tecnica");
+            cell = row.CreateCell(12);
+            cell.SetCellValue("Tipo Servicio");
+            cell = row.CreateCell(13);
+            cell.SetCellValue("Valor Pagar");
+            cell = row.CreateCell(14);
+            cell.SetCellValue("Cantidad Equipos");
+            cell = row.CreateCell(15);
+            cell.SetCellValue("Numero Celular");
+            cell = row.CreateCell(16);
+            cell.SetCellValue("Correos");
+            cell = row.CreateCell(17);
+            cell.SetCellValue("ProfilePicture");
             foreach (var employee in dbContext.Employees)
             {
                 rowNumber++;
@@ -133,13 +164,47 @@ namespace Project_Technician.Controllers
                 cell = row.CreateCell(0);
                 cell.SetCellValue(employee.IdPersona);
                 cell = row.CreateCell(1);
-                cell.SetCellValue(employee.FullNombre);
+                cell.SetCellValue(employee.Nombre+" "+employee.Apellido);
+                cell = row.CreateCell(2);
+                cell.SetCellValue(employee.Cedula);
+                cell = row.CreateCell(3);
+                cell.SetCellValue(employee.direccion);
+                cell = row.CreateCell(4);
+                cell.SetCellValue(employee.FechaIngreso);
+                cell = row.CreateCell(5);
+                cell.SetCellValue(employee.FechaEntrega);
+                cell = row.CreateCell(6);
+                cell.SetCellValue(employee.Tipo);
+                cell = row.CreateCell(7);
+                cell.SetCellValue(employee.Serial);
+                cell = row.CreateCell(8);
+                cell.SetCellValue(employee.Marca);
+                cell = row.CreateCell(9);
+                cell.SetCellValue(employee.Descripcion);
+                cell = row.CreateCell(10);
+                cell.SetCellValue(employee.GarantiaMarca);
+                cell = row.CreateCell(11);
+                cell.SetCellValue(employee.GarantiaTecnica);
+                cell = row.CreateCell(12);
+                cell.SetCellValue(employee.TipoServicio);
+                cell = row.CreateCell(13);
+                cell.SetCellValue(employee.ValorPagar);
+                cell = row.CreateCell(14);
+                cell.SetCellValue(employee.CantidadEquipos);
+                cell = row.CreateCell(15);
+                cell.SetCellValue(employee.NumeroCelular);
+                cell = row.CreateCell(16);
+                cell.SetCellValue(employee.Correos);
+                cell = row.CreateCell(17);
+                cell.SetCellValue(employee.ProfilePicture);
+                cell = row.CreateCell(17);
+                cell.SetCellValue(employee.FechaIngreso);
             }
             using (var stream = new MemoryStream())
             {
                 workbook.Write(stream);
                 var content = stream.ToArray();
-                return File(content, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "ArticleList");
+                return File(content, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "employee.xlsx");
             }
 
         }

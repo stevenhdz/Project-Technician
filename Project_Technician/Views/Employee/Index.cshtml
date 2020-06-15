@@ -81,13 +81,13 @@
     <thead>
         <tr>
             <th>
-
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.FullNombre)
             </th>
             <th>
-                
+
+            </th>
+            <th>
+
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Cedula)
@@ -139,7 +139,11 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-             <td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+                @Html.DisplayFor(modelItem => item.Apellido)
+            </td>
+            <td>
                 <p>
                     <a asp-action="Edit" asp-route-id="@item.IdPersona" class="btn btn-sm text-light bg-primary rounded-0 text-uppercase"><i class="fas fa-plus-circle"></i>Editar</a>
                     <br>
@@ -149,22 +153,18 @@
                 </p>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-                @Html.DisplayFor(modelItem => item.Apellido)
-            </td>
-            <td>
                 <a href="~/images/@item.ProfilePicture"
-                       class="rounded-circle"
-                       height="50" width="50"
-                       asp-append-version="true">
+                   class="rounded-circle"
+                   height="50" width="50"
+                   asp-append-version="true">
 
 
-                        <img src="~/images/@item.ProfilePicture"
-                             height="50" width="50"
-                             asp-append-version="true" />
-                             
-                    </a>
-                    <br />
+                    <img src="~/images/@item.ProfilePicture"
+                         height="50" width="50"
+                         asp-append-version="true" />
+
+                </a>
+                <br />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Cedula)

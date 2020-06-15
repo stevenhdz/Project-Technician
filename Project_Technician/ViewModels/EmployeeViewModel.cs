@@ -19,6 +19,7 @@ namespace Project_Technician.ViewModels
         [Required(ErrorMessage = "Cedula requerida")]
         public Int64 Cedula { get; set; }
 
+
         [Required(ErrorMessage = "Direccion requerida")]
         public string direccion { get; set; }
 
@@ -39,7 +40,6 @@ namespace Project_Technician.ViewModels
 
         public string Descripcion { get; set; }
 
-
         [Required(ErrorMessage = "Garantia Proveedor requerida")]
         public string GarantiaMarca { get; set; }
 
@@ -59,7 +59,7 @@ namespace Project_Technician.ViewModels
         public Int16 CantidadEquipos { get; set; }
 
         [StringLength(10)]
-        [Range(3000000000, 3999999999, ErrorMessage = "Ingrese numero valido")]
+        [RegularExpression("^([3]{1})([0-5]{1})[0-9]{8}", ErrorMessage = "Numero invalido")]
         [Required(ErrorMessage = "Numero de contacto requerido")]
         public string NumeroCelular { get; set; }
 

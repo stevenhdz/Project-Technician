@@ -154,53 +154,19 @@ namespace Project_Technician.Controllers
         public IActionResult Csv()
         {
             var builder = new StringBuilder();
+
             builder.AppendLine("Id,Username,Identity");
-            foreach (var user in _context.Employees)
-            {
-                builder.AppendLine($"{user.IdPersona},{user.FullNombre},{user.Cedula}");
-            }
 
-            return File(Encoding.UTF8.GetBytes(builder.ToString()), "text/csv", "users.csv");
+                foreach (var user in _context.Employees)
+                {
+                    builder.AppendLine($"{user.IdPersona},{user.Nombre+""+user.Apellido},{user.Cedula}");
+                }
+                return File(Encoding.UTF8.GetBytes(builder.ToString()), "text/csv", "users.csv");
+
+            
+            
         }
 
-        public IActionResult Excel()
-        {
-            IWorkbook workbook = new XSSFWorkbook();
-            ISheet sheet = workbook.CreateSheet("My sheet");
-            int rowNumber = 0;
-            IRow row = sheet.CreateRow(rowNumber);
-            ICell cell = row.CreateCell(rowNumber);
-            cell.SetCellValue("Id");
-            cell = row.CreateCell(1);
-            cell.SetCellValue("Nombre");
-            cell = row.CreateCell(2);
-            cell.SetCellValue("Cedula");
-            cell = row.CreateCell(3);
-            cell.SetCellValue("Direccion");
-            cell = row.CreateCell(4);
-            cell.SetCellValue("Fecha Ingreso");
-            foreach (var employee in _context.Employees)
-            {
-                rowNumber++;
-                row = sheet.CreateRow(rowNumber);
-                cell = row.CreateCell(0);
-                cell.SetCellValue(employee.IdPersona);
-                cell = row.CreateCell(1);
-                cell.SetCellValue(employee.FullNombre);
-                cell = row.CreateCell(2);
-                cell.SetCellValue(employee.Cedula);
-                cell = row.CreateCell(3);
-                cell.SetCellValue(employee.direccion);
-                cell = row.CreateCell(4);
-                cell.SetCellValue(employee.FechaIngreso);
-            }
-            using (var stream = new MemoryStream())
-            {
-                workbook.Write(stream);
-                var content = stream.ToArray();
-                return File(content, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "ArticleList.xlsx");
-            }
-
-        }
+        
     }
 }
