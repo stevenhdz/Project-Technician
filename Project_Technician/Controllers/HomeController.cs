@@ -143,7 +143,7 @@ namespace Project_Technician.Controllers
             cell = row.CreateCell(9);
             cell.SetCellValue("Descripcion");
             cell = row.CreateCell(10);
-            cell.SetCellValue("Descripcion");
+            cell.SetCellValue("Respuesta");
             cell = row.CreateCell(11);
             cell.SetCellValue("Garantia Marca");
             cell = row.CreateCell(12);

@@ -1,23 +1,23 @@
 @model Project_Technician.Models.Employee
 
 
-<CENTER>
+
     <div class="card-header text-uppercase text-dark">
         <h4>FACTURA</h4>
         <h6>ALEXCOM</h6>
-</CENTER>
 
 
-        <h2 class="article__title">
+
+        <h3 class="article__title">
+            <p class="text-monospace">
             <strong class="text-danger">Cliente:</strong> 
             @Html.DisplayFor(model => model.Nombre) @Html.DisplayFor(model => model.Apellido)
-        </h2>
+            </p>
+        </h3>
 
-        <p>
+        <p class="text-monospace">
             <strong class="text-danger">Numero de celular:</strong>
              @Html.DisplayFor(model => model.NumeroCelular)
-        </p>
-        <p>
             <strong class="text-danger">Correo:</strong> 
             @Html.DisplayFor(model => model.Correos)
         </p>
