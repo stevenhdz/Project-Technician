@@ -184,7 +184,11 @@
                     @employee.Marca
                 </td>
                 <td>
-                    @employee.Descripcion
+                
+                     <span class="d-inline-block text-truncate" style="max-width: 150px;">
+                        @employee.Descripcion
+                     </span>
+                  
                 </td>
                 <td>
                     @employee.GarantiaMarca
@@ -213,7 +217,9 @@
 </table>
 
 
-<script>function myFunction() {
+<script>
+    
+    function myFunction() {
         var input, filter, table, tr, td, i, txtValue;
         input = document.getElementById("myInput");
         filter = input.value.toUpperCase();
@@ -231,4 +237,6 @@
             }
         }
     }
+
+
     </script>

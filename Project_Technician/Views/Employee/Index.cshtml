@@ -191,10 +191,14 @@
                 @Html.DisplayFor(modelItem => item.Marca)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Descripcion)
+                <span class="d-inline-block text-truncate" style="max-width: 150px;">     
+                    @Html.DisplayFor(modelItem => item.Descripcion)
+                </span>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Respuesta)
+                <span class="d-inline-block text-truncate" style="max-width: 150px;">     
+                    @Html.DisplayFor(modelItem => item.Respuesta)
+                </span>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.GarantiaMarca)
