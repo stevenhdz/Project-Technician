@@ -56,6 +56,11 @@ _____________________________________________________________________
 - [x] MVVM
 - [ ] MVT
 
+
+**Graphics**
+
+[Google Charts Api](https://www.tresce.com/blog/google-charts-la-api-de-graficos-para-el-dasarrollo-web/)
+
 **SCAFFOLDING**
 - [x] Controllers
 - [x] Views
@@ -82,6 +87,7 @@ _____________________________________________________________________
 **Micro ORM or ORM:**
 
 - [ ] Dapper
+- [x] LinQ
 - [x] Entity Framework core
 - [ ] Entity Framework
 
