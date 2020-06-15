@@ -20,5 +20,6 @@ namespace Project_Technician.Data
         public DbSet<Project_Technician.ViewModels.ContactViewModel> ContactViewModel { get; set; }
         public DbSet<Employee> EmployeeViewModel { get; set; }
 
+        public DbQuery<TypeStatistics> TypeStatistics { get; set; }
     }
 }
