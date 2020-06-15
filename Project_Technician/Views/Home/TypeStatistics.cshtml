@@ -1,0 +1,43 @@
+﻿@model List<TypeStatistics>
+
+@{
+    ViewData["Title"] = "Gráfica por tipo";
+    string chartTitle = "Estadistica por tipo";
+    string chartUnit = "Cantidad";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Estadisticas por tipo</h1>
+</div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<div id="chart_div"></div>
+
+
+<script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart', 'bar'] });
+    google.charts.setOnLoadCallback(drawChart);
+    var current = 0;
+    function drawChart() {
+        var data = [];
+        data[0] = google.visualization.arrayToDataTable([
+            ['Tipo', 'Total'],
+            @foreach (var data in Model) {
+                <text>['@data.Tipo', @data.Total],</text>
+            }
+        ]);
+        var options = {
+            title: '@chartTitle',
+            colors: ['#b0120a', '#7b1fa2', '#ffab91', '#d95f02'],
+            hAxis: {title: '@chartUnit'},
+            vAxis: {title: 'Tipo'},
+            width: '100%',
+            height: '100%',
+            chartArea: { width: '85%', height: '75%' },
+        };
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        chart.draw(data[current], options);
+    }
+    drawChart();
+</script>
