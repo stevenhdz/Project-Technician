@@ -5,55 +5,63 @@
     <div class="card-header text-uppercase text-dark">
         <h4>FACTURA</h4>
         <h6>ALEXCOM</h6>
-
-
-
-        <h2 class="article__title"><strong class="text-danger">Cliente:</strong> @Html.DisplayFor(model => model.Nombre) @Html.DisplayFor(model => model.Apellido)</h2>
-        <p><strong class="text-danger">Numero de celular:</strong> @Html.DisplayFor(model => model.NumeroCelular)</p>
-        <p><strong class="text-danger">Correo:</strong> @Html.DisplayFor(model => model.Correos)</p>
-
-
-        <p class="text-monospace">
-            <strong class="text-danger">Registrado con</strong> @Html.DisplayFor(model => model.Cedula) <strong class="text-danger">quien viene de la direccion</strong> @Html.DisplayFor(model => model.direccion) <strong class="text-danger">el dia</strong> @Html.DisplayFor(model => model.FechaIngreso)
-            <strong class="text-danger">con</strong> @Html.DisplayFor(model => model.CantidadEquipos) <strong class="text-danger">equipo</strong> @Html.DisplayFor(model => model.Tipo) <strong class="text-danger">
-                de la marca
-            </strong> @Html.DisplayFor(model => model.Marca) <strong class="text-danger"> afirmando que</strong> @Html.DisplayFor(model => model.GarantiaMarca)
-            <strong class="text-danger">
-                tiene garantia por parte de la marca con el numero serial
-            </strong>
-            @Html.DisplayFor(model => model.Serial)
-        <strong class="text-danger">aplicando para el servicio</strong>  @Html.DisplayFor(model => model.TipoServicio) <strong class="text-danger">donde nos indica</strong> @Html.DisplayFor(model => model.Descripcion)
-        </p>
-        <br />
-        <p class="text-monospace">
-            <strong class="text-danger">Se le hace entrega del</strong> @Html.DisplayFor(model => model.Tipo) <strong class="text-danger">el dia</strong> @Html.DisplayFor(model => model.FechaEntrega) <strong class="text-danger">donde se indica</strong> @Html.DisplayFor(model => model.Respuesta)
-            &nbsp;
-            <br />
-            <strong class="text-danger">Aplica garantia</strong> @Html.DisplayFor(model => model.GarantiaTecnica) <strong class="text-danger">
-    por ____ en caso de falla de parte se debe traer al sitio tecnico para ser revisada
-    donde se analizara si el daño fue por parte de daños fisicos o daños tecnicos o ocasionado por el cliente.
-</strong>
-    &nbsp;
-    <br />
-    <strong class="text-danger">Costo total a pagar</strong> $@Html.DisplayFor(model => model.ValorPagar)
-</p>
-
-
-
-    </div>
 </CENTER>
 
 
+        <h2 class="article__title">
+            <strong class="text-danger">Cliente:</strong> 
+            @Html.DisplayFor(model => model.Nombre) @Html.DisplayFor(model => model.Apellido)
+        </h2>
+
+        <p>
+            <strong class="text-danger">Numero de celular:</strong>
+             @Html.DisplayFor(model => model.NumeroCelular)
+        </p>
+        <p>
+            <strong class="text-danger">Correo:</strong> 
+            @Html.DisplayFor(model => model.Correos)
+        </p>
 
 
+        <p class="text-monospace">
+            <strong class="text-danger">Registrado con</strong> 
+            @Html.DisplayFor(model => model.Cedula) 
+            <strong class="text-danger">quien viene de la direccion</strong> 
+            @Html.DisplayFor(model => model.direccion) 
+            <strong class="text-danger">el dia</strong> 
+            @Html.DisplayFor(model => model.FechaIngreso)
+            <strong class="text-danger">con</strong> 
+            @Html.DisplayFor(model => model.CantidadEquipos) 
+            <strong class="text-danger">equipo</strong> 
+            @Html.DisplayFor(model => model.Tipo) 
+            <strong class="text-danger">de la marca</strong> 
+            @Html.DisplayFor(model => model.Marca) 
+            <strong class="text-danger"> afirmando que</strong> 
+            @Html.DisplayFor(model => model.GarantiaMarca)
+            <strong class="text-danger">tiene garantia por parte de la marca con el numero serial</strong>
+            @Html.DisplayFor(model => model.Serial)
+            <strong class="text-danger">aplicando para el servicio</strong>  
+            @Html.DisplayFor(model => model.TipoServicio) 
+            <strong class="text-danger">donde nos indica</strong> 
+            @Html.DisplayFor(model => model.Descripcion)
+        </p>
 
+        <br />
 
+        <p class="text-monospace">
+            <strong class="text-danger">Se le hace entrega del</strong> 
+            @Html.DisplayFor(model => model.Tipo) 
+            <strong class="text-danger">el dia</strong> 
+            @Html.DisplayFor(model => model.FechaEntrega) 
+            <strong class="text-danger">donde se indica</strong> 
+            @Html.DisplayFor(model => model.Respuesta)
+            <strong class="text-danger">Aplica garantia</strong> 
+            @Html.DisplayFor(model => model.GarantiaTecnica) 
+            <strong class="text-danger">por ____ en caso de falla de parte se debe traer al sitio tecnico para ser revisada donde se analizara si el daño fue por parte de daños fisicos o daños tecnicos o ocasionado por el cliente.</strong>
+            <strong class="text-danger">Costo total a pagar</strong> 
+            $@Html.DisplayFor(model => model.ValorPagar)
+        </p>
 
+    </div>
 
-
-
-<div>
-    <a asp-action="Edit" class="btn btn-sm text-light bg-primary rounded-0 text-uppercase" asp-route-id="@Model.IdPersona"><i class="fas fa-plus-circle"></i>Editar</a> |
-    <a asp-action="Index" class="btn btn-sm text-light bg-primary rounded-0 text-uppercase"><i class="fas fa-plus-circle"></i>Atras</a>
-</div>
 
