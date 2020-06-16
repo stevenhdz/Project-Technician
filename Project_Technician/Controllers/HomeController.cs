@@ -108,10 +108,10 @@ namespace Project_Technician.Controllers
         public IActionResult Csv()
         {
             var builder = new StringBuilder();
-            builder.AppendLine("Id,Username");
+            //builder.AppendLine("Id,Nombre,Cedula,Direccion,Fecha Ingreso,Fecha Entrega,Tipo,Serial,Marca,Descripcion,Respuesta,Garantia Marca,Garantia Tecnica,Tipo Servicio,Valor Total,Cantidad equipos,numero celular,Correos");
             foreach (var user in dbContext.Employees)
             {
-                builder.AppendLine($"{user.IdPersona},{user.FullNombre}");
+                builder.AppendLine($"{user.Nombre},{user.Apellido},{user.Cedula},{user.direccion},{user.FechaIngreso},{user.FechaEntrega},{user.Tipo},{user.Serial},{user.Marca},{user.Descripcion},{user.Respuesta},{user.GarantiaMarca},{user.GarantiaTecnica},{user.TipoServicio},{user.ValorPagar},{user.CantidadEquipos},{user.NumeroCelular},{user.Correos}");
             }
             
 
