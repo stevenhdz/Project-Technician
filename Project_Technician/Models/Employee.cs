@@ -31,7 +31,6 @@ namespace Project_Technician.Models
         public string NumeroCelular { get; set; }
         public string Correos { get; set; }
         public string ProfilePicture { get; set; }
-
         public Employee()
         {
             FullNombre = Nombre + " " + Apellido;

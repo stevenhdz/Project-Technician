@@ -57,7 +57,7 @@ namespace Project_Technician.Controllers
             if (ModelState.IsValid)
             {
                 string uniqueFileName = UploadedFile(model);
-
+ 
                 Employee employee = new Employee
                 {
                     Nombre = model.Nombre,
@@ -80,7 +80,14 @@ namespace Project_Technician.Controllers
                     NumeroCelular = model.NumeroCelular,
                     Correos = model.Correos,
                     ProfilePicture = uniqueFileName,
+
+
+
+                    
                 };
+
+                
+
                 dbContext.Add(employee);
                 await dbContext.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
