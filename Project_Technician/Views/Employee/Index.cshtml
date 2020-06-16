@@ -129,9 +129,6 @@
                 @Html.DisplayNameFor(model => model.ValorPagar)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Total)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.CantidadEquipos)
             </th>
             <th>
@@ -139,6 +136,9 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Correos)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Total)
             </th>
         </tr>
     </thead>
@@ -216,9 +216,6 @@
                 $@Html.DisplayFor(modelItem => item.ValorPagar)
             </td>
             <td>
-                $@Html.DisplayFor(modelItem => item.Total)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.CantidadEquipos)
             </td>
             <td>
@@ -226,6 +223,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Correos)
+            </td>
+            <td>
+                $@Html.DisplayFor(modelItem => item.Total)
             </td>
         </tr>
 }
