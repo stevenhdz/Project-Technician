@@ -80,9 +80,6 @@ namespace Project_Technician.Controllers
                     NumeroCelular = model.NumeroCelular,
                     Correos = model.Correos,
                     ProfilePicture = uniqueFileName,
-
-
-
                     
                 };
 

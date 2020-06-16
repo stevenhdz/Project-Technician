@@ -2,7 +2,7 @@
 
 
 
-    <div class="card-header text-uppercase text-dark">
+    <div id="seleccion" class="card-header text-uppercase text-dark">
         <h4>FACTURA</h4>
         <h6>ALEXCOM</h6>
 
@@ -65,3 +65,16 @@
     </div>
 
 
+<a href="javascript:imprSelec('seleccion')" class="btn btn-sm text-light bg-primary rounded-0 text-uppercase"><i class="fas fa-plus-circle"></i>Imprimir</a>
+
+
+<script>
+    function imprSelec(nombre) {
+	  var ficha = document.getElementById(nombre);
+	  var ventimp = window.open(' ', 'popimpr');
+	  ventimp.document.write( ficha.innerHTML );
+	  ventimp.document.close();
+	  ventimp.print( );
+	  ventimp.close();
+	}
+</script>
