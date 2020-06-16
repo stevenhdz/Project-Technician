@@ -27,7 +27,7 @@ namespace Project_Technician.Models
         public string GarantiaTecnica { get; set; }
         public string TipoServicio { get; set; }
         public string ValorPagar { get; set; }
-        public string CantidadEquipos { get; set; }
+        public int CantidadEquipos { get; set; }
         public string NumeroCelular { get; set; }
         public string Correos { get; set; }
         public string ProfilePicture { get; set; }

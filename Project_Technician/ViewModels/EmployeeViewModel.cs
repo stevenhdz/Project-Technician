@@ -57,7 +57,7 @@ namespace Project_Technician.ViewModels
 
         [Range(1, 9999999999, ErrorMessage = "Ingrese numero valido")]
         [Required(ErrorMessage = "Cantidad de equipos")]
-        public string CantidadEquipos { get; set; }
+        public int CantidadEquipos { get; set; }
 
         [StringLength(10)]
         [RegularExpression("^([3]{1})([0-5]{1})[0-9]{8}", ErrorMessage = "Numero invalido")]

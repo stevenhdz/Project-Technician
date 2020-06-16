@@ -251,7 +251,7 @@ namespace Project_Technician.Controllers
                             GarantiaTecnica = entries[12],
                             TipoServicio = entries[13],
                             ValorPagar = entries[14],   
-                            CantidadEquipos = entries[15],
+                            CantidadEquipos = int.Parse(entries[15]),
                             NumeroCelular = entries[16],
                             Correos = entries[17]
                             //ProfilePicture= entries[18]
@@ -276,7 +276,7 @@ namespace Project_Technician.Controllers
                 .Select(e => new
                 {
                     Tipo = e.Key,
-                    Total = e.Count()
+                    Total = e.Sum(g=> g.CantidadEquipos)
                 }).ToListAsync();
 
             List<TypeStatistics> statistics = new List<TypeStatistics>();
