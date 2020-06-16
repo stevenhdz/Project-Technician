@@ -26,13 +26,15 @@ namespace Project_Technician.Models
         public string GarantiaMarca { get; set; }
         public string GarantiaTecnica { get; set; }
         public string TipoServicio { get; set; }
-        public string ValorPagar { get; set; }
+        public int ValorPagar { get; set; }
         public int CantidadEquipos { get; set; }
         public string NumeroCelular { get; set; }
         public string Correos { get; set; }
+        public int Total { get; set; }
         public string ProfilePicture { get; set; }
         public Employee()
         {
+            Total = ValorPagar*CantidadEquipos;
             FullNombre = Nombre + " " + Apellido;
         }
     }

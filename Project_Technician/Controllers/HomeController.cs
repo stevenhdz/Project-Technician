@@ -79,6 +79,7 @@ namespace Project_Technician.Controllers
                     CantidadEquipos = model.CantidadEquipos,
                     NumeroCelular = model.NumeroCelular,
                     Correos = model.Correos,
+                    Total = (model.CantidadEquipos*model.ValorPagar),
                     ProfilePicture = uniqueFileName,
                     
                 };
@@ -115,7 +116,7 @@ namespace Project_Technician.Controllers
             //builder.AppendLine("Id,Nombre,Cedula,Direccion,Fecha Ingreso,Fecha Entrega,Tipo,Serial,Marca,Descripcion,Respuesta,Garantia Marca,Garantia Tecnica,Tipo Servicio,Valor Total,Cantidad equipos,numero celular,Correos");
             foreach (var user in dbContext.Employees)
             {
-                builder.AppendLine($"{user.Nombre},{user.Apellido},{user.Cedula},{user.direccion},{user.FechaIngreso},{user.FechaEntrega},{user.Tipo},{user.Serial},{user.Marca},{user.Descripcion},{user.Respuesta},{user.GarantiaMarca},{user.GarantiaTecnica},{user.TipoServicio},{user.ValorPagar},{user.CantidadEquipos},{user.NumeroCelular},{user.Correos}");
+                builder.AppendLine($"{user.Nombre},{user.Apellido},{user.Cedula},{user.direccion},{user.FechaIngreso},{user.FechaEntrega},{user.Tipo},{user.Serial},{user.Marca},{user.Descripcion},{user.Respuesta},{user.GarantiaMarca},{user.GarantiaTecnica},{user.TipoServicio},{user.ValorPagar},{user.CantidadEquipos},{user.NumeroCelular},{user.Correos},{user.Total}");
             }
             
 
@@ -165,6 +166,8 @@ namespace Project_Technician.Controllers
             cell = row.CreateCell(17);
             cell.SetCellValue("Correos");
             cell = row.CreateCell(18);
+            cell.SetCellValue("Total");
+            cell = row.CreateCell(19);
             cell.SetCellValue("ProfilePicture");
             foreach (var employee in dbContext.Employees)
             {
@@ -207,6 +210,8 @@ namespace Project_Technician.Controllers
                 cell = row.CreateCell(17);
                 cell.SetCellValue(employee.Correos);
                 cell = row.CreateCell(18);
+                cell.SetCellValue(employee.Total);
+                cell = row.CreateCell(19);
                 cell.SetCellValue(employee.ProfilePicture);
             }
             using (var stream = new MemoryStream())
@@ -250,17 +255,18 @@ namespace Project_Technician.Controllers
                             GarantiaMarca = entries[11],
                             GarantiaTecnica = entries[12],
                             TipoServicio = entries[13],
-                            ValorPagar = entries[14],   
+                            ValorPagar = int.Parse(entries[14]),  
                             CantidadEquipos = int.Parse(entries[15]),
                             NumeroCelular = entries[16],
-                            Correos = entries[17]
+                            Correos = entries[17],
+                            Total = int.Parse(entries[18])
                             //ProfilePicture= entries[18]
                         };
                         dbContext.Employees.Add(data);
                     }
                 }
                 dbContext.SaveChanges();
-                ViewBag.Message = $"The file {model.File.FileName} has been processed successfully!";
+                ViewBag.Message = $"El {model.File.FileName} Fue procesado exitosamente!";
             }
             catch (Exception ex)
             {

@@ -53,7 +53,7 @@ namespace Project_Technician.ViewModels
 
         [DataType(DataType.Currency)]
         [Required(ErrorMessage = "Precio requerido")]
-        public string ValorPagar { get; set; }
+        public int ValorPagar { get; set; }
 
         [Range(1, 9999999999, ErrorMessage = "Ingrese numero valido")]
         [Required(ErrorMessage = "Cantidad de equipos")]
@@ -69,6 +69,8 @@ namespace Project_Technician.ViewModels
         [EmailAddress(ErrorMessage = "Correo invalido")]
         [DataType(DataType.EmailAddress)]
         public string Correos { get; set; }
+
+        public int Total { get; set; }
 
         [Required(ErrorMessage = "Imagen requerido")]
         public IFormFile ProfileImage { get; set; }
