@@ -65,10 +65,34 @@
     </div>
 
 
-<a href="javascript:imprSelec('seleccion')" class="btn btn-sm text-light bg-primary rounded-0 text-uppercase"></i>Imprimir</a>
+<a href="javascript:imprSelec('seleccion')" class="btn btn-sm text-light bg-primary rounded-0 text-uppercase">Imprimir</a>
+<a href="mailto:@Html.DisplayFor(model => model.Correos)?cc=stevenhernandezj@gmail.com&bcc=&subject=Factura&body=
+
+
+FACTURA
+%0d%0a
+ALEXCOM
+%0d%0a
+%0d%0acliente%3a%20 @Html.DisplayFor(model => model.Nombre) %20 @Html.DisplayFor(model => model.Apellido)
+%0d%0anumero de celular%3a%20 @Html.DisplayFor(model => model.NumeroCelular)
+%0d%0acorreo%3a%20 @Html.DisplayFor(model => model.Correos)
+%0d%0a
+%0d%0aregistrado con%3a%20 @Html.DisplayFor(model => model.Cedula)  %20 quien viene de la direccion %20 @Html.DisplayFor(model => model.direccion)  
+%20 el dia %20 @Html.DisplayFor(model => model.FechaIngreso) %20 con  %20 @Html.DisplayFor(model => model.CantidadEquipos) %20 equipo %20 @Html.DisplayFor(model => model.Tipo) 
+%20 de la marca %20 @Html.DisplayFor(model => model.Marca) %20 afirmando que %20 @Html.DisplayFor(model => model.GarantiaMarca) %20 tiene garantia por parte de la marca %20
+con el numero serial %20 @Html.DisplayFor(model => model.Serial) %20 aplicando para el servicio %20 @Html.DisplayFor(model => model.TipoServicio) %20 donde nos indica %20
+@Html.DisplayFor(model => model.Descripcion)%0d%0a
+%0d%0a
+%20se le hace entrega del %20 @Html.DisplayFor(model => model.Tipo) %20 el dia  %20 @Html.DisplayFor(model => model.FechaEntrega) %20 donde se indica %20 @Html.DisplayFor(model => model.Respuesta) 
+%20 aplica garantia %20 @Html.DisplayFor(model => model.GarantiaTecnica) 
+%20  por ____ en caso de falla de parte se debe traer al sitio tecnico para ser revisada donde se analizara si el daño fue por parte de daños fisicos o daños tecnicos o ocasionado por el cliente.%0d%0a
+%0d%0a
+%20total cancelado $@Html.DisplayFor(model => model.Total) %20 
 
 
 
+" class="btn btn-sm text-light bg-primary rounded-0 text-uppercase">Enviar Correo</a>
+                    
 
 <script>
     function imprSelec(nombre) {
