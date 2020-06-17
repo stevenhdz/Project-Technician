@@ -12,6 +12,11 @@ using System.Threading.Tasks;
 using NPOI.XSSF.UserModel;
 using NPOI.SS.UserModel;
 using System.Collections.Generic;
+using MimeKit;
+using MailKit.Net.Smtp;
+using MailKit.Security;
+using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Http;
 
 namespace Project_Technician.Controllers
 {
@@ -20,10 +25,13 @@ namespace Project_Technician.Controllers
 
         private readonly ApplicationDbContext dbContext;
         private readonly IWebHostEnvironment webHostEnvironment;
-        public HomeController(ApplicationDbContext context, IWebHostEnvironment hostEnvironment)
+        private readonly IConfiguration _configuration;
+
+        public HomeController(ApplicationDbContext context, IWebHostEnvironment hostEnvironment, IConfiguration configuration)
         {
             dbContext = context;
             webHostEnvironment = hostEnvironment;
+            _configuration = configuration;
         }
 
         public async Task<IActionResult> Index()
@@ -297,5 +305,61 @@ namespace Project_Technician.Controllers
             }
             return View(statistics);
         }
+
+
+        public IActionResult SendEmail()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult SendEmail(FileEmail model)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    string to = "prueba@yopmail.com"; //Change for a real email
+                    string subject = "Email Confirmation";
+                    string body = $"<h1>Email Confirmation</h1> <br> <p> Hello </p>";
+                    string from = _configuration["Mail:From"];
+                    string smtp = _configuration["Mail:Smtp"];
+                    string port = _configuration["Mail:Port"];
+                    string password = _configuration["Mail:Password"];
+
+                    MimeMessage message = new MimeMessage();
+                    message.From.Add(new MailboxAddress(from));
+                    message.To.Add(new MailboxAddress(to));
+                    message.Subject = subject;
+                    BodyBuilder bodyBuilder = new BodyBuilder
+                    {
+                        HtmlBody = body
+                    };
+                    if(model.File != null)
+                    {
+                        string fileName = Path.GetFileName(model.File.FileName);
+                        bodyBuilder.Attachments.Add(fileName, model.File.OpenReadStream());
+                    }
+                    message.Body = bodyBuilder.ToMessageBody();
+
+                    using (SmtpClient client = new SmtpClient())
+                    {
+                        client.ServerCertificateValidationCallback = (s, c, h, e) => true;
+                        client.Connect(smtp, int.Parse(port), SecureSocketOptions.SslOnConnect);
+                        client.Authenticate(from, password);
+                        client.Send(message);
+                        client.Disconnect(true);
+                    }
+                    ViewBag.Message = "Mail was send succesfully!";
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.Message = ex.Message;
+
+                }
+            }
+            return View();
+        }
+
     }
 }
