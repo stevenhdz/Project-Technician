@@ -1,6 +1,8 @@
 @model Project_Technician.Models.Employee
 
 
+<!-- genera ambiguedad pero funciona el proceso -->
+
 
     <div id="seleccion" class="card-header text-uppercase text-dark">
         <h4>FACTURA</h4>
@@ -67,8 +69,6 @@
 
 <a href="javascript:imprSelec('seleccion')" class="btn btn-sm text-light bg-primary rounded-0 text-uppercase">Imprimir</a>
 <a href="mailto:@Html.DisplayFor(model => model.Correos)?cc=stevenhernandezj@gmail.com&bcc=&subject=Factura&body=
-
-
 FACTURA
 %0d%0a
 ALEXCOM
@@ -88,9 +88,6 @@ con el numero serial %20 @Html.DisplayFor(model => model.Serial) %20 aplicando p
 %20  por ____ en caso de falla de parte se debe traer al sitio tecnico para ser revisada donde se analizara si el daño fue por parte de daños fisicos o daños tecnicos o ocasionado por el cliente.%0d%0a
 %0d%0a
 %20total cancelado $@Html.DisplayFor(model => model.Total) %20 
-
-
-
 " class="btn btn-sm text-light bg-primary rounded-0 text-uppercase">Enviar Correo</a>
                     
 
