@@ -146,6 +146,10 @@ RegularExpression ("^([3]{1})([0-5]{1})[0-9]{8}", ErrorMessage ="Numero invalido
 - [x] IIS
 
 
+**Email**
+
+[Mailto](https://www.rapidtables.com/web/html/mailto.html)
+
 **Branches**
 
 [Document Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/contents/)
