@@ -150,9 +150,5 @@ namespace Project_Technician.Controllers
         {
             return _context.Employees.Any(e => e.IdPersona == id);
         }
-
-        
-
-
     }
 }

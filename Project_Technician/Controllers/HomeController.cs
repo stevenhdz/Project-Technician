@@ -65,12 +65,12 @@ namespace Project_Technician.Controllers
             if (ModelState.IsValid)
             {
                 string uniqueFileName = UploadedFile(model);
- 
+
                 Employee employee = new Employee
                 {
                     Nombre = model.Nombre,
                     Apellido = model.Apellido,
-                    FullNombre = model.Nombre +" "+ model.Apellido,
+                    FullNombre = model.Nombre + " " + model.Apellido,
                     Cedula = model.Cedula,
                     direccion = model.direccion,
                     FechaIngreso = model.FechaIngreso,
@@ -87,12 +87,12 @@ namespace Project_Technician.Controllers
                     CantidadEquipos = model.CantidadEquipos,
                     NumeroCelular = model.NumeroCelular,
                     Correos = model.Correos,
-                    Total = (model.CantidadEquipos*model.ValorPagar),
+                    Total = (model.CantidadEquipos * model.ValorPagar),
                     ProfilePicture = uniqueFileName,
-                    
+
                 };
 
-                
+
 
                 dbContext.Add(employee);
                 await dbContext.SaveChangesAsync();
@@ -126,7 +126,7 @@ namespace Project_Technician.Controllers
             {
                 builder.AppendLine($"{user.Nombre};{user.Apellido};{user.Cedula};{user.direccion};{user.FechaIngreso};{user.FechaEntrega};{user.Tipo};{user.Serial};{user.Marca};{user.Descripcion};{user.Respuesta};{user.GarantiaMarca};{user.GarantiaTecnica};{user.TipoServicio};{user.ValorPagar};{user.CantidadEquipos};{user.NumeroCelular};{user.Correos};{user.Total}");
             }
-            
+
             return File(Encoding.UTF8.GetBytes(builder.ToString()), "text/csv", "users.csv");
         }
 
@@ -183,7 +183,7 @@ namespace Project_Technician.Controllers
                 cell = row.CreateCell(0);
                 cell.SetCellValue(employee.IdPersona);
                 cell = row.CreateCell(1);
-                cell.SetCellValue(employee.Nombre+" "+employee.Apellido);
+                cell.SetCellValue(employee.Nombre + " " + employee.Apellido);
                 cell = row.CreateCell(2);
                 cell.SetCellValue(employee.Cedula);
                 cell = row.CreateCell(3);
@@ -262,7 +262,7 @@ namespace Project_Technician.Controllers
                             GarantiaMarca = entries[11],
                             GarantiaTecnica = entries[12],
                             TipoServicio = entries[13],
-                            ValorPagar = int.Parse(entries[14]),  
+                            ValorPagar = int.Parse(entries[14]),
                             CantidadEquipos = int.Parse(entries[15]),
                             NumeroCelular = entries[16],
                             Correos = entries[17],
@@ -289,7 +289,7 @@ namespace Project_Technician.Controllers
                 .Select(e => new
                 {
                     Tipo = e.Key,
-                    Total = e.Sum(g=> g.CantidadEquipos)
+                    Total = e.Sum(g => g.CantidadEquipos)
                 }).ToListAsync();
 
             List<TypeStatistics> statistics = new List<TypeStatistics>();
@@ -305,6 +305,9 @@ namespace Project_Technician.Controllers
             }
             return View(statistics);
         }
-        
+
+
+
+
     }
 }
