@@ -150,6 +150,8 @@ RegularExpression ("^([3]{1})([0-5]{1})[0-9]{8}", ErrorMessage ="Numero invalido
 
 [Mailto](https://www.rapidtables.com/web/html/mailto.html)
 
+[Encoding references](https://www.w3schools.com/tags/ref_urlencode.ASP)
+
 **Branches**
 
 [Document Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/contents/)
