@@ -5,6 +5,15 @@
 _____________________________________________________________________
 Update
 
+crear usuario en BBDD
+
+          USE [mydb]
+          GO
+          /****** Object:  User [IIS APPPOOL\DefaultAppPool]    Script Date: 20/06/2020 10:25:45 p. m. ******/
+          CREATE USER [IIS APPPOOL\DefaultAppPool] FOR LOGIN [IIS APPPOOL\DefaultAppPool] WITH DEFAULT_SCHEMA=[dbo]
+          GO
+
+
 json:    ConnectionStrings": {
           "DefaultConnection": "Server=.\\SQLEXPRESS;Database=mydb;Trusted_Connection=True;Connection Timeout=30;"
           },
