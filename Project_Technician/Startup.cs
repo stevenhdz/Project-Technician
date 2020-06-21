@@ -28,6 +28,7 @@ namespace Project_Technician
         public void ConfigureServices(IServiceCollection services)
         {
 
+            //UseSqlServer
 
             services.AddDbContext<ApplicationDbContext>(options =>
                options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
@@ -42,7 +43,8 @@ namespace Project_Technician
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
+            //IsDevel.. es default
+            if (env.IsProduction())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
@@ -61,12 +63,31 @@ namespace Project_Technician
             app.UseAuthentication();
             app.UseAuthorization();
 
+            
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
+            //    endpoints.MapRazorPages();
+            //    endpoints.MapAreaControllerRoute(name: "Principal", areaName: "Principal", pattern: "{controller=Principal}/{action=Index}/{id?}");
+            //    endpoints.MapAreaControllerRoute(name: "Categorias", areaName: "categorias", pattern: "{controller=Categorias}/{action=Index}/{id?}");
+            //});
+
+
+            /* SIN AREAS */ 
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapRazorPages();
+                //endpoints.MapRazorPages();
+                endpoints.MapControllerRoute(
+                    name: "Contact",
+                    pattern: "{controller=Contact}/{action=Index}/{id?}");
+
+                endpoints.MapControllerRoute(
+                    name: "Employee",
+                    pattern: "{controller=Employee}/{action=Index}/{id?}");
             });
         }
     }
