@@ -9,6 +9,9 @@ Medio de uso VPN HAMACHI conexion referencial local, ip, vpn
 
 [HAMACHI](https://vpn.net/)
 
+Grupo ID: shernaji
+Pass: 123456
+
 1ER PASO
 
           USE [master]
