@@ -5,6 +5,10 @@
 _____________________________________________________________________
 Update
 
+Medio de uso VPN HAMACHI conexion referencial local, ip, vpn
+
+[HAMACHI](https://vpn.net/)
+
 1ER PASO
 
           USE [master]
