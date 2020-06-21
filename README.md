@@ -6,7 +6,7 @@ _____________________________________________________________________
 Update
 
 json:    ConnectionStrings": {
-          "DefaultConnection": "Server=DESKTOP-3DUHIB4\\SQLEXPRESS;Database=mydb;Trusted_Connection=True;Connection Timeout=30;"
+          "DefaultConnection": "Server=.\\SQLEXPRESS;Database=mydb;Trusted_Connection=True;Connection Timeout=30;"
           },
 
 ![alt text](https://raw.githubusercontent.com/stevenhdz/Project-Technician/master/code.png)
