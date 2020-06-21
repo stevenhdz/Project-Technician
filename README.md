@@ -3,6 +3,13 @@
 ### In Progress - Any time, I finish 🛠⚙️ if it compiles it can get an error
 
 _____________________________________________________________________
+Update
+
+json:    ConnectionStrings": {
+          "DefaultConnection": "Server=.\\SQLEXPRESS;Database=mydb;Trusted_Connection=True;Connection Timeout=30;"
+          },
+
+![alt text](https://raw.githubusercontent.com/stevenhdz/Project-Technician/master/code.png)
 
 
 **Design**
