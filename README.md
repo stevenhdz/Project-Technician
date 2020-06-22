@@ -5,6 +5,8 @@
 _____________________________________________________________________
 Update
 
+
+debes pedir el inicio de sesion ya que es una web intranet
 Si se monta desde windows hay que configurar la bbdd mientras que por mac tira la migracion automatica.
 Pagina azure: https://project-technician.azurewebsites.net/
 
