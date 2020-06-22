@@ -5,6 +5,37 @@
 _____________________________________________________________________
 Update
 
+to future: https://social.technet.microsoft.com/wiki/contents/articles/37349.asp-net-core-in-memory-caching.aspx
+
+Medio de uso VPN HAMACHI conexion referencial local, ip, vpn
+
+[HAMACHI](https://vpn.net/)
+
+Grupo ID: shernaji
+Pass: 123456
+
+1ER PASO
+
+          USE [master]
+          GO
+          /****** Object:  Login [IIS APPPOOL\DefaultAppPool]    Script Date: 21/06/2020 12:09:40 a. m. ******/
+          CREATE LOGIN [IIS APPPOOL\DefaultAppPool] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[Español]
+          GO
+          ALTER SERVER ROLE [sysadmin] ADD MEMBER [IIS APPPOOL\DefaultAppPool]
+          GO
+          ALTER SERVER ROLE [securityadmin] ADD MEMBER [IIS APPPOOL\DefaultAppPool]
+          GO
+
+
+2DO PASO
+
+          USE [mydb]
+          GO
+          /****** Object:  User [IIS APPPOOL\DefaultAppPool]    Script Date: 20/06/2020 10:25:45 p. m. ******/
+          CREATE USER [IIS APPPOOL\DefaultAppPool] FOR LOGIN [IIS APPPOOL\DefaultAppPool] WITH DEFAULT_SCHEMA=[dbo]
+          GO
+
+
 json:    ConnectionStrings": {
           "DefaultConnection": "Server=.\\SQLEXPRESS;Database=mydb;Trusted_Connection=True;Connection Timeout=30;"
           },
