@@ -40,6 +40,12 @@ namespace Project_Technician.Controllers
             return View(employee);
         }
 
+        //vista principal
+        public IActionResult principal()
+        {
+            return View();
+        }
+
         //vista privacidad
         public IActionResult Privacy()
         {

@@ -79,7 +79,7 @@ namespace Project_Technician
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=principal}/{id?}");
                 //endpoints.MapRazorPages();
                 endpoints.MapControllerRoute(
                     name: "Contact",

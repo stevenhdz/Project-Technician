@@ -61,6 +61,8 @@
     /* Add a grey background color to the table header and on hover */
     background-color: #f1f1f1;
 }
+
+p{ text-align: center;}
 </style>
 
 
@@ -82,8 +84,9 @@
 </center>
 
 
-<table id="myTable" class="table text-monospace text-uppercase table-striped table-bordered"
-       width="300">
+
+<table class="table text-monospace text-uppercase table-striped table-bordered"
+       width="100%">
 
 
     <thead>
@@ -141,7 +144,7 @@
             </th>
         </tr>
     </thead>
-    <tbody>
+    <tbody id="myTable" >
 
         
         @foreach (var employee in Model)
@@ -251,4 +254,7 @@
 }
 
 
+
     </script>
+
+  
