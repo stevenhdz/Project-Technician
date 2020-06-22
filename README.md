@@ -5,6 +5,9 @@
 _____________________________________________________________________
 Update
 
+pagina azure pedir login para iniciar
+https://project-technician.azurewebsites.net
+
 Heroku or Azure public app
 
 to future: https://social.technet.microsoft.com/wiki/contents/articles/37349.asp-net-core-in-memory-caching.aspx
