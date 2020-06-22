@@ -44,7 +44,7 @@ namespace Project_Technician
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             //IsDevel.. es default
-            if (env.IsProduction())
+            if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
@@ -57,9 +57,7 @@ namespace Project_Technician
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-
             app.UseAuthentication();
             app.UseAuthorization();
 
@@ -80,7 +78,7 @@ namespace Project_Technician
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=principal}/{id?}");
-                //endpoints.MapRazorPages();
+                endpoints.MapRazorPages();
                 endpoints.MapControllerRoute(
                     name: "Contact",
                     pattern: "{controller=Contact}/{action=Index}/{id?}");

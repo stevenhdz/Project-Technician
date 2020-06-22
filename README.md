@@ -5,6 +5,8 @@
 _____________________________________________________________________
 Update
 
+Heroku or Azure public app
+
 to future: https://social.technet.microsoft.com/wiki/contents/articles/37349.asp-net-core-in-memory-caching.aspx
 
 Medio de uso VPN HAMACHI conexion referencial local, ip, vpn

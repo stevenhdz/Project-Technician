@@ -17,6 +17,7 @@ using MailKit.Net.Smtp;
 using MailKit.Security;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Http;
+using System.Diagnostics;
 
 namespace Project_Technician.Controllers
 {
@@ -32,6 +33,12 @@ namespace Project_Technician.Controllers
             dbContext = context;
             webHostEnvironment = hostEnvironment;
             _configuration = configuration;
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
         public async Task<IActionResult> Index()
