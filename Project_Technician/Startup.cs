@@ -44,7 +44,7 @@ namespace Project_Technician
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             //IsDevel.. es default
-            if (env.IsDevelopment())
+            if (env.IsProduction())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
