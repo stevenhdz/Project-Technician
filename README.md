@@ -5,6 +5,9 @@
 _____________________________________________________________________
 Update
 
+install
+Current .NET Core Hosting Bundle installer (direct download)
+
 pagina azure pedir login para iniciar
 https://project-technician.azurewebsites.net
 
