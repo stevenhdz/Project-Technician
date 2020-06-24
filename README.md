@@ -5,6 +5,8 @@
 _____________________________________________________________________
 Update
 
+https://www.entityframeworktutorial.net/efcore/entity-framework-core.aspx
+
 install
 Current .NET Core Hosting Bundle installer (direct download)
 
