@@ -30,10 +30,10 @@ namespace LoginTemplate
 
             services.ConfigureApplicationCookie(options =>
             {
+                options.ExpireTimeSpan = TimeSpan.FromSeconds(30);
                 options.LoginPath = "/Account/NotAuthorized";
                 options.AccessDeniedPath = "/Account/NotAuthorized";
             });
-
 
             services.AddIdentity<UserEntity, IdentityRole>(cfg =>
             {
@@ -75,6 +75,7 @@ namespace LoginTemplate
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
+            
 
             seeder.SeedAsync().Wait();
 
