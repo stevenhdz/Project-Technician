@@ -32,7 +32,7 @@ namespace LoginTemplate.Data.Entities
 
         [Display(Name = "User Type")]
         [Required(ErrorMessage = "The field {0} is mandatory.")]
-        public int UserType { get; set; }
+        public string UserType { get; set; }
 
         public string FullName => $"{FirstName} {LastName}";
 
