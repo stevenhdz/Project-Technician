@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_Technician", "Project_Technician\Project_Technician.csproj", "{BF1AA11F-470F-4375-AC0F-BA0B2CF5615E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project_Technician", "Project_Technician\Project_Technician.csproj", "{BF1AA11F-470F-4375-AC0F-BA0B2CF5615E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginTemplate", "LoginTemplate\LoginTemplate.csproj", "{72939674-0CE7-4F09-B22C-6491D20360A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BF1AA11F-470F-4375-AC0F-BA0B2CF5615E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF1AA11F-470F-4375-AC0F-BA0B2CF5615E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF1AA11F-470F-4375-AC0F-BA0B2CF5615E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72939674-0CE7-4F09-B22C-6491D20360A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72939674-0CE7-4F09-B22C-6491D20360A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72939674-0CE7-4F09-B22C-6491D20360A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72939674-0CE7-4F09-B22C-6491D20360A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
